@@ -624,6 +624,13 @@ namespace HenryMod.Modules
             NetworkStateMachine networkMachine = bodyPrefab.GetComponent<NetworkStateMachine>();
             networkMachine.stateMachines = Array.Empty<EntityStateMachine>();
 
+            //vehicle fix
+            CharacterBody body = bodyPrefab.GetComponent<CharacterBody>();
+            if (body)
+            {            
+                body.vehicleIdleStateMachine = Array.Empty<EntityStateMachine>();
+            }
+
             CharacterDeathBehavior deathBehavior = bodyPrefab.GetComponent<CharacterDeathBehavior>();
             if (deathBehavior)
             {

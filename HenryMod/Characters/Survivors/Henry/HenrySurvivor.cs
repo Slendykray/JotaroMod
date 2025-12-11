@@ -14,7 +14,7 @@ namespace HenryMod.Survivors.Henry
     public class HenrySurvivor : SurvivorBase<HenrySurvivor>
     {
         //used to load the assetbundle for this character. must be unique
-        public override string assetBundleName => "myassetbundle"; //if you do not change this, you are giving permission to deprecate the mod
+        public override string assetBundleName => "huy"; //if you do not change this, you are giving permission to deprecate the mod
 
         //the name of the prefab we will create. conventionally ending in "Body". must be unique
         public override string bodyName => "HenryBody"; //if you do not change this, you get the point by now

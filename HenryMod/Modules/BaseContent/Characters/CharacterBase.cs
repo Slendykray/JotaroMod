@@ -57,10 +57,10 @@ namespace HenryMod.Modules.Characters
             itemDisplayRuleSet.name = "idrs" + bodyName;
             
             prefabCharacterModel.itemDisplayRuleSet = itemDisplayRuleSet;
-
+            //remove item displays
             if (itemDisplays != null) {
-                Modules.ItemDisplays.queuedDisplays++;
-                RoR2.ContentManagement.ContentManager.onContentPacksAssigned += SetItemDisplays;
+                //Modules.ItemDisplays.queuedDisplays++;
+                //RoR2.ContentManagement.ContentManager.onContentPacksAssigned += SetItemDisplays;
             }
         }
 
