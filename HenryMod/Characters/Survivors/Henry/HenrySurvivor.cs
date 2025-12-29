@@ -14,23 +14,23 @@ namespace HenryMod.Survivors.Henry
     public class HenrySurvivor : SurvivorBase<HenrySurvivor>
     {
         //used to load the assetbundle for this character. must be unique
-        public override string assetBundleName => "huy"; //if you do not change this, you are giving permission to deprecate the mod
+        public override string assetBundleName => "jotarobundle"; //if you do not change this, you are giving permission to deprecate the mod
 
         //the name of the prefab we will create. conventionally ending in "Body". must be unique
-        public override string bodyName => "HenryBody"; //if you do not change this, you get the point by now
+        public override string bodyName => "JotaroBody"; //if you do not change this, you get the point by now
 
         //name of the ai master for vengeance and goobo. must be unique
-        public override string masterName => "HenryMonsterMaster"; //if you do not
+        public override string masterName => "JotaroMonsterMaster"; //if you do not
 
         //the names of the prefabs you set up in unity that we will use to build your character
-        public override string modelPrefabName => "mdlHenry";
-        public override string displayPrefabName => "HenryDisplay";
+        public override string modelPrefabName => "mdlJotaro";
+        public override string displayPrefabName => "JotaroDisplay";
 
         public const string HENRY_PREFIX = HenryPlugin.DEVELOPER_PREFIX + "_HENRY_";
 
         //used when registering your survivor's language tokens
         public override string survivorTokenPrefix => HENRY_PREFIX;
-        
+
         public override BodyInfo bodyInfo => new BodyInfo
         {
             bodyName = bodyName,
@@ -38,15 +38,18 @@ namespace HenryMod.Survivors.Henry
             subtitleNameToken = HENRY_PREFIX + "SUBTITLE",
 
             characterPortrait = assetBundle.LoadAsset<Texture>("texHenryIcon"),
-            bodyColor = Color.white,
+            bodyColor = new Color32(206, 80, 255, 255),
             sortPosition = 100,
 
-            crosshair = Asset.LoadCrosshair("Standard"),
+            
+
+            crosshair = Asset.LoadCrosshair("SimpleDot"),
             podPrefab = LegacyResourcesAPI.Load<GameObject>("Prefabs/NetworkedObjects/SurvivorPod"),
 
             maxHealth = 110f,
             healthRegen = 1.5f,
-            armor = 0f,
+            armor = 20f,
+            moveSpeed = 7f,
 
             jumpCount = 1,
         };
@@ -55,17 +58,21 @@ namespace HenryMod.Survivors.Henry
         {
                 new CustomRendererInfo
                 {
-                    childName = "SwordModel",
-                    material = assetBundle.LoadMaterial("matHenry"),
+                    childName = "Body",
                 },
                 new CustomRendererInfo
                 {
-                    childName = "GunModel",
+                    childName = "Coat",  
                 },
                 new CustomRendererInfo
                 {
-                    childName = "Model",
-                }
+                    childName = "Face",
+                },
+                new CustomRendererInfo
+                {
+                    childName = "Eyes",
+                },
+                
         };
 
         public override UnlockableDef characterUnlockableDef => HenryUnlockables.characterUnlockableDef;
@@ -128,6 +135,9 @@ namespace HenryMod.Survivors.Henry
         {
             //example of how to create a HitBoxGroup. see summary for more details
             Prefabs.SetupHitBoxGroup(characterModelObject, "SwordGroup", "SwordHitbox");
+
+            Prefabs.SetupHitBoxGroup(characterModelObject, "PunchGroup", "PunchHitbox");
+
         }
 
         public override void InitializeEntityStateMachines() 
@@ -232,7 +242,7 @@ namespace HenryMod.Survivors.Henry
             primarySkillDef1.stepCount = 2;
             primarySkillDef1.stepGraceDuration = 0.5f;
 
-            Skills.AddPrimarySkills(bodyPrefab, primarySkillDef1);
+            Skills.AddPrimarySkills(bodyPrefab, primarySkillDef1);           
         }
 
         private void AddSecondarySkills()
@@ -273,6 +283,43 @@ namespace HenryMod.Survivors.Henry
             });
 
             Skills.AddSecondarySkills(bodyPrefab, secondarySkillDef1);
+
+
+            //punch
+
+            SkillDef secondarySkillDef2 = Skills.CreateSkillDef(new SkillDefInfo
+            {
+                skillName = "JotaroPunch",
+                skillNameToken = HENRY_PREFIX + "SECONDARY_PUNCH_NAME",
+                skillDescriptionToken = HENRY_PREFIX + "SECONDARY_PUNCH_DESCRIPTION",
+                keywordTokens = new string[] { "KEYWORD_AGILE" },
+                skillIcon = assetBundle.LoadAsset<Sprite>("texSecondaryIcon"),
+
+                activationState = new EntityStates.SerializableEntityStateType(typeof(PunchDash)),
+                activationStateMachineName = "Body",
+                interruptPriority = EntityStates.InterruptPriority.Skill,
+
+                baseRechargeInterval = 3f,
+                baseMaxStock = 1,
+
+                rechargeStock = 1,
+                requiredStock = 1,
+                stockToConsume = 1,
+
+                resetCooldownTimerOnUse = false,
+                fullRestockOnAssign = true,
+                dontAllowPastMaxStocks = false,
+                mustKeyPress = true,
+                beginSkillCooldownOnSkillEnd = false,
+
+                isCombatSkill = true,
+                canceledFromSprinting = false,
+                cancelSprintingOnActivation = false,
+                forceSprintDuringState = false,
+
+            });
+
+            Skills.AddSecondarySkills(bodyPrefab, secondarySkillDef2);
         }
 
         private void AddUtiitySkills()
@@ -311,6 +358,40 @@ namespace HenryMod.Survivors.Henry
             });
 
             Skills.AddUtilitySkills(bodyPrefab, utilitySkillDef1);
+
+            //rapid punch
+            SkillDef utilitySkillDef2 = Skills.CreateSkillDef(new SkillDefInfo
+            {
+                skillName = "JotaroRapidPunch",
+                skillNameToken = HENRY_PREFIX + "UTILITY_PUNCH_NAME",
+                skillDescriptionToken = HENRY_PREFIX + "UTILITY_PUNCH_DESCRIPTION",
+                skillIcon = assetBundle.LoadAsset<Sprite>("texUtilityIcon"),
+
+                activationState = new EntityStates.SerializableEntityStateType(typeof(BaseDash)),
+                activationStateMachineName = "Body",
+                interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
+
+                baseRechargeInterval = 3f,
+                baseMaxStock = 1,
+
+                rechargeStock = 1,
+                requiredStock = 1,
+                stockToConsume = 1,
+
+                resetCooldownTimerOnUse = false,
+                fullRestockOnAssign = true,
+                dontAllowPastMaxStocks = false,
+                mustKeyPress = true,
+                beginSkillCooldownOnSkillEnd = false,
+
+                isCombatSkill = true,
+                canceledFromSprinting = false,
+                cancelSprintingOnActivation = false,
+                forceSprintDuringState = false,
+            });
+
+            Skills.AddUtilitySkills(bodyPrefab, utilitySkillDef2);
+
         }
 
         private void AddSpecialSkills()

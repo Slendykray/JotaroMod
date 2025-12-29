@@ -29,7 +29,7 @@ namespace HenryMod.Survivors.Henry
             string outro = "..and so he left, searching for a new identity.";
             string outroFailure = "..and so he vanished, forever a blank slate.";
 
-            Language.Add(prefix + "NAME", "Henry");
+            Language.Add(prefix + "NAME", "Jotaro");
             Language.Add(prefix + "DESCRIPTION", desc);
             Language.Add(prefix + "SUBTITLE", "The Chosen One");
             Language.Add(prefix + "LORE", "sample lore");
@@ -53,11 +53,17 @@ namespace HenryMod.Survivors.Henry
             #region Secondary
             Language.Add(prefix + "SECONDARY_GUN_NAME", "Handgun");
             Language.Add(prefix + "SECONDARY_GUN_DESCRIPTION", Tokens.agilePrefix + $"Fire a handgun for <style=cIsDamage>{100f * HenryStaticValues.gunDamageCoefficient}% damage</style>.");
+
+            Language.Add(prefix + "SECONDARY_PUNCH_NAME", "Ora!");
+            Language.Add(prefix + "SECONDARY_PUNCH_DESCRIPTION",  $"Punch for <style=cIsDamage>{100f * HenryStaticValues.punchDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Utility
             Language.Add(prefix + "UTILITY_ROLL_NAME", "Roll");
             Language.Add(prefix + "UTILITY_ROLL_DESCRIPTION", "Roll a short distance, gaining <style=cIsUtility>300 armor</style>. <style=cIsUtility>You cannot be hit during the roll.</style>");
+
+            Language.Add(prefix + "UTILITY_PUNCH_NAME", "Ora-ora-ora-ora-ora!");
+            Language.Add(prefix + "UTILITY_PUNCH_DESCRIPTION", $"Repeatedly punch for <style=cIsDamage>{100f * HenryStaticValues.rapidPunchDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Special
