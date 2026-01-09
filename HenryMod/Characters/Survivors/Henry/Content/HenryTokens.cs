@@ -1,6 +1,7 @@
 ﻿using System;
 using HenryMod.Modules;
 using HenryMod.Survivors.Henry.Achievements;
+using HenryMod.Survivors.Henry.SkillStates;
 
 namespace HenryMod.Survivors.Henry
 {
@@ -69,6 +70,9 @@ namespace HenryMod.Survivors.Henry
             #region Special
             Language.Add(prefix + "SPECIAL_BOMB_NAME", "Bomb");
             Language.Add(prefix + "SPECIAL_BOMB_DESCRIPTION", $"Throw a bomb for <style=cIsDamage>{100f * HenryStaticValues.bombDamageCoefficient}% damage</style>.");
+
+            Language.Add(prefix + "SPECIAL_ZAWARUDO_NAME", "ZA WARUDO");          
+            Language.Add(prefix + "SPECIAL_ZAWARUDO_DESCRIPTION", $"Stop <style=cDeath>FUCKING</style> <style=cWorldEvent>TIME</style> for <style=cWorldEvent>{StopTime.TIMESTOP_DURATION}</style> seconds.");
             #endregion
 
             #region Achievements

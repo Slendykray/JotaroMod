@@ -1,6 +1,7 @@
 ﻿using HenryMod.Modules.BaseStates;
 using RoR2;
 using UnityEngine;
+using HenryMod.Survivors.Henry.Components;
 
 namespace HenryMod.Survivors.Henry.SkillStates
 {
@@ -29,7 +30,8 @@ namespace HenryMod.Survivors.Henry.SkillStates
             attackRecoil = 0.5f;
             hitHopVelocity = 4f;
 
-            swingSoundString = "HenrySwordSwing";
+            //swingSoundString = "HenrySwordSwing";
+            swingSoundString = "OraOra";
             hitSoundString = "";
             muzzleString = swingIndex % 2 == 0 ? "SwingLeft" : "SwingRight";
             playbackRateParam = "Slash.playbackRate";
@@ -39,6 +41,8 @@ namespace HenryMod.Survivors.Henry.SkillStates
             impactSound = HenryAssets.swordHitSoundEvent.index;
 
             base.OnEnter();
+
+            GetComponent<StarPlatinum>().AddTime(duration);
         }
 
         protected override void PlayAttackAnimation()

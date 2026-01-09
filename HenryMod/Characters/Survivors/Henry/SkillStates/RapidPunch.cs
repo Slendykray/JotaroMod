@@ -8,6 +8,8 @@ using UnityEngine;
 using System.Linq;
 
 using UnityEngine.Networking;
+using HenryMod.Survivors.Henry.Components;
+using EntityStates.Loader;
 
 namespace HenryMod.Survivors.Henry.SkillStates
 {
@@ -29,8 +31,12 @@ namespace HenryMod.Survivors.Henry.SkillStates
         public override void OnEnter()
         {           
             base.OnEnter();
-            this.overlapAttack = base.InitMeleeOverlap(HenryStaticValues.rapidPunchDamageCoefficient, WhirlwindBase.hitEffectPrefab, base.GetModelTransform(), "PunchGroup");
+            //this.overlapAttack = base.InitMeleeOverlap(HenryStaticValues.rapidPunchDamageCoefficient, WhirlwindBase.hitEffectPrefab, base.GetModelTransform(), "PunchGroup");
+            this.overlapAttack = base.InitMeleeOverlap(HenryStaticValues.rapidPunchDamageCoefficient, LoaderMeleeAttack.overchargeImpactEffectPrefab, base.GetModelTransform(), "PunchGroup");
+
             this.overlapAttack.damageType.damageSource = DamageSource.Utility;
+
+            GetComponent<StarPlatinum>().AddTime(duration);      
         }
 
   
@@ -42,8 +48,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
             characterMotor.velocity = Vector3.zero;
 
-            characterDirection.forward = BaseDash.dashVector;
-
+            characterDirection.forward = GetComponent<AimBuffer>().direction;
 
             float deltaTime = base.GetDeltaTime();
             this.stopwatch += deltaTime;
@@ -59,8 +64,11 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
                 //Util.PlayAttackSpeedSound("HenrySwordSwing", gameObject, attackSpeedStat);
 
-                EffectManager.SimpleMuzzleFlash(WhirlwindBase.swingEffectPrefab, gameObject, "SwingCenter", false);
+                //EffectManager.SimpleMuzzleFlash(WhirlwindBase.swingEffectPrefab, gameObject, "SwingCenter", false);
 
+                EffectManager.SimpleMuzzleFlash(HenryAssets.oraOraEffect, gameObject, "SwingCenter", false);
+
+                Util.PlaySound("OraOra", gameObject);
                 //PlayCrossfade("Gesture, Override", "Slash" + 1, "Slash.playbackRate", duration, 0.05f);
 
                 overlapAttack.ResetIgnoredHealthComponents();
@@ -84,7 +92,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
         public override void OnExit()
         {
-            base.OnExit();        
+            base.OnExit();
         }
 
      

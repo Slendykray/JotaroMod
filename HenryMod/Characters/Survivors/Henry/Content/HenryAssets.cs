@@ -12,6 +12,8 @@ namespace HenryMod.Survivors.Henry
         public static GameObject swordSwingEffect;
         public static GameObject swordHitImpactEffect;
 
+        public static GameObject oraOraEffect;
+
         public static GameObject bombExplosionEffect;
 
         // networked hit sounds
@@ -41,6 +43,8 @@ namespace HenryMod.Survivors.Henry
 
             swordSwingEffect = _assetBundle.LoadEffect("HenrySwordSwingEffect", true);
             swordHitImpactEffect = _assetBundle.LoadEffect("ImpactHenrySlash");
+
+            oraOraEffect = _assetBundle.LoadEffect("OraOraEffect", true);
         }
 
         private static void CreateBombExplosionEffect()

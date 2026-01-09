@@ -21,6 +21,10 @@ namespace HenryMod.Survivors.Henry
             Modules.Content.AddEntityState(typeof(BaseDash));
 
             Modules.Content.AddEntityState(typeof(PunchDash));
+
+            Modules.Content.AddEntityState(typeof(StopTime));
+
+            Modules.Content.AddEntityState(typeof(TimeStopFreezeState));
         }
     }
 }

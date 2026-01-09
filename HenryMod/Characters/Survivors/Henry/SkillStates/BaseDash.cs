@@ -1,5 +1,7 @@
 ﻿using EntityStates;
 using EntityStates.Merc;
+using HenryMod.Survivors.Henry.Components;
+using HenryMod.Modules;
 using RoR2;
 using UnityEngine;
 
@@ -9,7 +11,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
     public class BaseDash : BaseSkillState
     {
 
-        public static Vector3 dashVector;
+        private Vector3 dashVector;
 
         private float stopwatch;
 
@@ -19,12 +21,18 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
         protected EntityState nextState;
 
+  
 
         public override void OnEnter()
         { 
             base.OnEnter();
 
-            dashVector = base.GetAimRay().direction;
+            PlayAnimation("FullBody, Override", "Dash", "Dash.playbackRate", duration * 2);
+
+            GetComponent<StarPlatinum>().AddTime(duration);
+
+            dashVector = inputBank.aimDirection;
+            GetComponent<AimBuffer>().direction = dashVector;
 
             nextState = new RapidPunch();
         }
@@ -35,7 +43,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
             characterDirection.forward = dashVector;
 
-            base.characterMotor.rootMotion += BaseDash.dashVector * (this.moveSpeedStat * dashSpeed * base.GetDeltaTime());
+            base.characterMotor.rootMotion += dashVector * (this.moveSpeedStat * dashSpeed * base.GetDeltaTime());
 
             this.stopwatch += GetDeltaTime();
 
@@ -52,7 +60,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
                     HurtBox component = array[i].GetComponent<HurtBox>();
                     if (component && component.healthComponent != base.healthComponent && component.teamIndex != TeamIndex.Player)
                     {
-                        this.outer.SetNextState(nextState);
+                        this.outer.SetNextState(nextState);                     
                         break;
                     }
                 }
@@ -68,7 +76,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
         public override void OnExit()
         {
             base.characterMotor.velocity *= 0.1f;
-
             base.OnExit();         
         }
        
