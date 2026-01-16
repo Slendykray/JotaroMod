@@ -15,11 +15,13 @@ namespace HenryMod.Survivors.Henry.SkillStates
             Animator modelAnimator = base.GetModelAnimator();
             if (modelAnimator)
             {
-                modelAnimator.enabled = false;
+                //modelAnimator.enabled = false;
+                modelAnimator.speed = 0f;
             }
             if (base.rigidbody && !base.rigidbody.isKinematic)
             {
                 base.rigidbody.velocity = Vector3.zero;
+                //base.rigidbody.angularVelocity = Vector3.zero;
                 if (base.rigidbodyMotor)
                 {
                     base.rigidbodyMotor.moveVector = Vector3.zero;
@@ -33,7 +35,9 @@ namespace HenryMod.Survivors.Henry.SkillStates
             Animator modelAnimator = base.GetModelAnimator();
             if (modelAnimator)
             {
-                modelAnimator.enabled = true;
+                //modelAnimator.enabled = true;
+             
+                modelAnimator.speed = 1f;
             }
             base.OnExit();
         }

@@ -7,11 +7,10 @@ using UnityEngine;
 //using System;
 using System.Linq;
 
-using UnityEngine.Networking;
 using HenryMod.Survivors.Henry.Components;
-using EntityStates.Loader;
+using UnityEngine.AddressableAssets;
 
-namespace HenryMod.Survivors.Henry.SkillStates
+namespace HenryMod.Survivors.Henry.SkillStates  
 {
     public class RapidPunch : BaseSkillState
     {
@@ -22,25 +21,32 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
         private float damageFrequency = 10f;
 
-        private float duration = 1.5f;
+        public static float duration = 4f;
 
         private float minDuration = 0.5f;
 
         private OverlapAttack overlapAttack;
 
+        private GameObject oraFX;
+
         public override void OnEnter()
         {           
             base.OnEnter();
-            //this.overlapAttack = base.InitMeleeOverlap(HenryStaticValues.rapidPunchDamageCoefficient, WhirlwindBase.hitEffectPrefab, base.GetModelTransform(), "PunchGroup");
-            this.overlapAttack = base.InitMeleeOverlap(HenryStaticValues.rapidPunchDamageCoefficient, LoaderMeleeAttack.overchargeImpactEffectPrefab, base.GetModelTransform(), "PunchGroup");
+
+            this.overlapAttack = base.InitMeleeOverlap(HenryStaticValues.rapidPunchDamageCoefficient, HenryAssets.loaderHit, base.GetModelTransform(), "PunchGroup");
 
             this.overlapAttack.damageType.damageSource = DamageSource.Utility;
 
-            GetComponent<StarPlatinum>().AddTime(duration);      
+            overlapAttack.procCoefficient = 0.8f;
+
+            oraFX = GameObject.Instantiate(HenryAssets.oraOraEffect, FindModelChild("SwingCenter"));
+
+            Util.PlaySound("Play_OraOra", gameObject);
+          
         }
 
-  
-     
+
+        private float attackRecoil = 2f;
 
         public override void FixedUpdate()
         {
@@ -58,24 +64,21 @@ namespace HenryMod.Survivors.Henry.SkillStates
             {
                 this.attackStopwatch -= num;
 
+                GetComponent<StarPlatinum>().AddTime(num);
 
-  
-              // Util.PlayAttackSpeedSound(WhirlwindBase.attackSoundString, base.gameObject, WhirlwindBase.slashPitch);
+                if (isAuthority)
+                {
+                    AddRecoil(-1f * attackRecoil, -2f * attackRecoil, -0.5f * attackRecoil, 0.5f * attackRecoil);
+                }
 
-                //Util.PlayAttackSpeedSound("HenrySwordSwing", gameObject, attackSpeedStat);
 
-                //EffectManager.SimpleMuzzleFlash(WhirlwindBase.swingEffectPrefab, gameObject, "SwingCenter", false);
 
-                EffectManager.SimpleMuzzleFlash(HenryAssets.oraOraEffect, gameObject, "SwingCenter", false);
-
-                Util.PlaySound("OraOra", gameObject);
-                //PlayCrossfade("Gesture, Override", "Slash" + 1, "Slash.playbackRate", duration, 0.05f);
 
                 overlapAttack.ResetIgnoredHealthComponents();
 
                 if (!overlapAttack.Fire() && stopwatch >= minDuration && isAuthority)
                 {
-                    outer.SetNextStateToMain();                   
+                    outer.SetNextStateToMain();                        
                 }
                    
 
@@ -92,10 +95,18 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
         public override void OnExit()
         {
+            Util.PlaySound("Stop_OraOra", gameObject);
+
+            Destroy(oraFX);
+  
             base.OnExit();
         }
 
-     
-     
+
+        public override InterruptPriority GetMinimumInterruptPriority()
+        {
+            return InterruptPriority.PrioritySkill;
+        }
+
     }
 }

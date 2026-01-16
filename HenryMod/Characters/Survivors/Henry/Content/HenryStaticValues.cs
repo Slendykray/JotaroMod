@@ -10,7 +10,7 @@ namespace HenryMod.Survivors.Henry
 
         public const float bombDamageCoefficient = 16f;
 
-        public const float punchDamageCoefficient = 1f;
+        public const float punchDamageCoefficient = 6f;
 
         public const float rapidPunchDamageCoefficient = 1f;
 

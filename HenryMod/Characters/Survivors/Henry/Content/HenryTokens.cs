@@ -21,19 +21,21 @@ namespace HenryMod.Survivors.Henry
         {
             string prefix = HenrySurvivor.HENRY_PREFIX;
 
-            string desc = "Henry is a skilled fighter who makes use of a wide arsenal of weaponry to take down his foes.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine
-             + "< ! > Sword is a good all-rounder while Boxing Gloves are better for laying a beatdown on more powerful foes." + Environment.NewLine + Environment.NewLine
-             + "< ! > Pistol is a powerful anti air, with its low cooldown and high damage." + Environment.NewLine + Environment.NewLine
-             + "< ! > Roll has a lingering armor buff that helps to use it aggressively." + Environment.NewLine + Environment.NewLine
-             + "< ! > Bomb can be used to wipe crowds with ease." + Environment.NewLine + Environment.NewLine;
+            string desc = "Jotaro is nuts.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine
+             + "< ! > If fully utilized, Ora-Ora does a lot of damage and procs." + Environment.NewLine + Environment.NewLine
+             + "< ! > Use ZA WARUDO and ORA to get yourself a good opening." + Environment.NewLine + Environment.NewLine
+             + "< ! > You can cancel out of Ora-Ora with ORA." + Environment.NewLine + Environment.NewLine           
+             + "< ! > lol." + Environment.NewLine + Environment.NewLine;
+    
 
-            string outro = "..and so he left, searching for a new identity.";
-            string outroFailure = "..and so he vanished, forever a blank slate.";
+            string outro = "..yare yare daze.";
+            string outroFailure = "..yare yare daze.";
+            string lore = "So, Za Warudo is the same type of stand as Star Platinum..";
 
             Language.Add(prefix + "NAME", "Jotaro");
             Language.Add(prefix + "DESCRIPTION", desc);
-            Language.Add(prefix + "SUBTITLE", "The Chosen One");
-            Language.Add(prefix + "LORE", "sample lore");
+            Language.Add(prefix + "SUBTITLE", "Stardust Crusader");
+            Language.Add(prefix + "LORE", lore);
             Language.Add(prefix + "OUTRO_FLAVOR", outro);
             Language.Add(prefix + "OUTRO_FAILURE", outroFailure);
 
@@ -49,14 +51,17 @@ namespace HenryMod.Survivors.Henry
             #region Primary
             Language.Add(prefix + "PRIMARY_SLASH_NAME", "Sword");
             Language.Add(prefix + "PRIMARY_SLASH_DESCRIPTION", Tokens.agilePrefix + $"Swing forward for <style=cIsDamage>{100f * HenryStaticValues.swordDamageCoefficient}% damage</style>.");
+
+            Language.Add(prefix + "PRIMARY_PUNCH_NAME", "Ora");
+            Language.Add(prefix + "PRIMARY_PUNCH_DESCRIPTION", Tokens.agilePrefix + $" Swing for <style=cIsDamage>{100f * HenryStaticValues.swordDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Secondary
             Language.Add(prefix + "SECONDARY_GUN_NAME", "Handgun");
             Language.Add(prefix + "SECONDARY_GUN_DESCRIPTION", Tokens.agilePrefix + $"Fire a handgun for <style=cIsDamage>{100f * HenryStaticValues.gunDamageCoefficient}% damage</style>.");
 
-            Language.Add(prefix + "SECONDARY_PUNCH_NAME", "Ora!");
-            Language.Add(prefix + "SECONDARY_PUNCH_DESCRIPTION",  $"Punch for <style=cIsDamage>{100f * HenryStaticValues.punchDamageCoefficient}% damage</style>.");
+            Language.Add(prefix + "SECONDARY_PUNCH_NAME", "ORA!");
+            Language.Add(prefix + "SECONDARY_PUNCH_DESCRIPTION", $"<style=cIsUtility>Dash</style>. <style=cIsDamage>Stunning</style>. Punch for <style=cIsDamage>{100f * HenryStaticValues.punchDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Utility
@@ -64,7 +69,7 @@ namespace HenryMod.Survivors.Henry
             Language.Add(prefix + "UTILITY_ROLL_DESCRIPTION", "Roll a short distance, gaining <style=cIsUtility>300 armor</style>. <style=cIsUtility>You cannot be hit during the roll.</style>");
 
             Language.Add(prefix + "UTILITY_PUNCH_NAME", "Ora-ora-ora-ora-ora!");
-            Language.Add(prefix + "UTILITY_PUNCH_DESCRIPTION", $"Repeatedly punch for <style=cIsDamage>{100f * HenryStaticValues.rapidPunchDamageCoefficient}% damage</style>.");
+            Language.Add(prefix + "UTILITY_PUNCH_DESCRIPTION", $"<style=cIsUtility>Dash</style>. Repeatedly punch for <style=cIsDamage>{100f * HenryStaticValues.rapidPunchDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Special
@@ -72,12 +77,12 @@ namespace HenryMod.Survivors.Henry
             Language.Add(prefix + "SPECIAL_BOMB_DESCRIPTION", $"Throw a bomb for <style=cIsDamage>{100f * HenryStaticValues.bombDamageCoefficient}% damage</style>.");
 
             Language.Add(prefix + "SPECIAL_ZAWARUDO_NAME", "ZA WARUDO");          
-            Language.Add(prefix + "SPECIAL_ZAWARUDO_DESCRIPTION", $"Stop <style=cDeath>FUCKING</style> <style=cWorldEvent>TIME</style> for <style=cWorldEvent>{StopTime.TIMESTOP_DURATION}</style> seconds.");
+            Language.Add(prefix + "SPECIAL_ZAWARUDO_DESCRIPTION", $"Stop <style=cIsHealth>FUCKING</style> <style=cIsUtility>TIME</style> for <style=cIsUtility>{StopTime.TIMESTOP_DURATION}s</style>.");
             #endregion
 
             #region Achievements
-            Language.Add(Tokens.GetAchievementNameToken(HenryMasteryAchievement.identifier), "Henry: Mastery");
-            Language.Add(Tokens.GetAchievementDescriptionToken(HenryMasteryAchievement.identifier), "As Henry, beat the game or obliterate on Monsoon.");
+            Language.Add(Tokens.GetAchievementNameToken(HenryMasteryAchievement.identifier), "Jotaro: Mastery");
+            Language.Add(Tokens.GetAchievementDescriptionToken(HenryMasteryAchievement.identifier), "As Jotaro, beat the game or obliterate on Monsoon.");
             #endregion
         }
     }

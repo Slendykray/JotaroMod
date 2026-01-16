@@ -1,14 +1,14 @@
 ﻿using RoR2;
 using UnityEngine;
 
-
+using UnityEngine.Rendering.PostProcessing;
 namespace HenryMod.Survivors.Henry.Components
 {
     internal class StarPlatinum: MonoBehaviour
     {             
         private float stopwatch;
         private bool active = false;
-        private float minActiveTime = 1;
+        private float minActiveTime = 0f;
 
         GameObject GetModel()
         {
@@ -45,8 +45,6 @@ namespace HenryMod.Survivors.Henry.Components
             }
                 
         }
-
-
 
     }
 }

@@ -2,11 +2,13 @@
 using RoR2;
 using UnityEngine;
 using HenryMod.Survivors.Henry.Components;
+using UnityEngine.AddressableAssets;
 
 namespace HenryMod.Survivors.Henry.SkillStates
 {
     public class SlashCombo : BaseMeleeAttack
     {
+       
         public override void OnEnter()
         {
             hitboxGroupName = "SwordGroup";
@@ -28,21 +30,45 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
             hitStopDuration = 0.012f;
             attackRecoil = 0.5f;
-            hitHopVelocity = 4f;
+            hitHopVelocity = 6f;
+             
 
-            //swingSoundString = "HenrySwordSwing";
-            swingSoundString = "OraOra";
-            hitSoundString = "";
+                        //swingSoundString = "HenrySwordSwing";
+            swingSoundString = "Play_loader_m1_swing";
+            hitSoundString = "Play_loader_m1_impact";
+            //hitSoundString = FireHook.fireSoundString;
             muzzleString = swingIndex % 2 == 0 ? "SwingLeft" : "SwingRight";
             playbackRateParam = "Slash.playbackRate";
-            swingEffectPrefab = HenryAssets.swordSwingEffect;
-            hitEffectPrefab = HenryAssets.swordHitImpactEffect;
+            //swingEffectPrefab = HenryAssets.swordSwingEffect;
+            swingEffectPrefab = HenryAssets.swingEffect;
+            //var loadedAsset = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/LoaderSwingBasic.prefab").WaitForCompletion();
+            //swingEffectPrefab = loadedAsset;
+            //hitEffectPrefab = HenryAssets.swordHitImpactEffect;
+            //hitEffectPrefab = HenryAssets.loaderHit;
 
-            impactSound = HenryAssets.swordHitSoundEvent.index;
-
+            //var loadedAsset2 = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/ImpactLoaderFistSmall.prefab").WaitForCompletion();
+            //var loadedAsset2 = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/OmniImpactVFXLoader.prefab").WaitForCompletion();
+            hitEffectPrefab = HenryAssets.loaderHit;
+            //impactSound = HenryAssets.swordHitSoundEvent.index;
+            //var loadedAsset1 = Addressables.LoadAssetAsync<NetworkSoundEventDef>("RoR2/Junk/Loader/nseLoaderM1Impact.asset").WaitForCompletion();
+            //impactSound = HenryAssets.loaderHitSound.index;
             base.OnEnter();
-
             GetComponent<StarPlatinum>().AddTime(duration);
+
+            swingEffectPrefab.GetComponent<DestroyOnTimer>().duration = baseDuration * attackEndPercentTime;
+
+
+//            GameObject loaderBody =
+//Addressables.LoadAssetAsync<GameObject>(
+//"RoR2/Base/Loader/LoaderBody.prefab"
+//).WaitForCompletion();
+//            var akObj = loaderBody.GetComponent<AkGameObj>();
+
+//            //o = Object.Instantiate(akObj, transform);
+//            AkSoundEngine.PostEvent("Play_loader_m1_swing", akObj.gameObject);
+           
+
+            //RoR2.Audio.PointSoundManager.EmitSoundLocal((RoR2.Audio.AkEventIdArg)swingSoundString, gameObject.transform.position);
         }
 
         protected override void PlayAttackAnimation()

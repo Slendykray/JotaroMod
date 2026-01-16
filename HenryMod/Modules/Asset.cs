@@ -131,6 +131,31 @@ namespace HenryMod.Modules
             return newEffect;
         }
 
+        internal static GameObject CreateEffect(GameObject newEffect, bool parentToTransform = false)
+        {
+            //GameObject newEffect = assetBundle.LoadAsset<GameObject>(resourceName);
+
+            //if (!newEffect)
+            //{
+            //    Log.ErrorAssetBundle(resourceName, assetBundle.name);
+            //    return null;
+            //}
+
+            newEffect.AddComponent<DestroyOnTimer>().duration = 12;
+            newEffect.AddComponent<NetworkIdentity>();
+            newEffect.AddComponent<VFXAttributes>().vfxPriority = VFXAttributes.VFXPriority.Always;
+            EffectComponent effect = newEffect.AddComponent<EffectComponent>();
+            effect.applyScale = false;
+            effect.effectIndex = EffectIndex.Invalid;
+            effect.parentToReferencedTransform = parentToTransform;
+            effect.positionAtReferencedTransform = true;
+            //effect.soundName = soundName;
+
+            Modules.Content.CreateAndAddEffectDef(newEffect);
+
+            return newEffect;
+        }
+
         internal static GameObject CreateProjectileGhostPrefab(this AssetBundle assetBundle, string ghostName)
         {
             GameObject ghostPrefab = assetBundle.LoadAsset<GameObject>(ghostName);

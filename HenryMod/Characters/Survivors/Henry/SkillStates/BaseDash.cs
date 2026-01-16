@@ -29,7 +29,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
             PlayAnimation("FullBody, Override", "Dash", "Dash.playbackRate", duration * 2);
 
-            GetComponent<StarPlatinum>().AddTime(duration);
+            //GetComponent<StarPlatinum>().AddTime(duration);
 
             dashVector = inputBank.aimDirection;
             GetComponent<AimBuffer>().direction = dashVector;
@@ -60,7 +60,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
                     HurtBox component = array[i].GetComponent<HurtBox>();
                     if (component && component.healthComponent != base.healthComponent && component.teamIndex != TeamIndex.Player)
                     {
-                        this.outer.SetNextState(nextState);                     
+                        this.outer.SetNextState(nextState);
                         break;
                     }
                 }
@@ -78,6 +78,11 @@ namespace HenryMod.Survivors.Henry.SkillStates
             base.characterMotor.velocity *= 0.1f;
             base.OnExit();         
         }
-       
+
+        public override InterruptPriority GetMinimumInterruptPriority()
+        {
+            return InterruptPriority.PrioritySkill;
+        }
+
     }
 }

@@ -2,6 +2,10 @@
 using R2API.Utils;
 using RoR2;
 using UnityEngine;
+using HenryMod.Survivors.Henry.Components;
+
+using EntityStates;
+
 
 namespace HenryMod.Survivors.Henry.SkillStates
 {
@@ -15,9 +19,9 @@ namespace HenryMod.Survivors.Henry.SkillStates
             damageType = DamageType.Stun1s;
             damageCoefficient = HenryStaticValues.punchDamageCoefficient;
             procCoefficient = 1f;
-            pushForce = 5000f;
+            pushForce = 3000f;
             //bonusForce = Vector3.zero;
-            bonusForce = GetAimRay().direction;
+            //bonusForce = GetAimRay().direction;
             baseDuration = 0.4f;
 
             //0-1 multiplier of baseduration, used to time when the hitbox is out (usually based on the run time of the animation)
@@ -31,23 +35,27 @@ namespace HenryMod.Survivors.Henry.SkillStates
             hitStopDuration = 0.012f;
             attackRecoil = 0.5f;
             hitHopVelocity = 6f;
-
-            swingSoundString = "HenrySwordSwing";
-            hitSoundString = "";
+             
+             
+            swingSoundString = "OraMega";
+            hitSoundString = "Play_loader_m1_impact";
             muzzleString = swingIndex % 2 == 0 ? "SwingLeft" : "SwingRight";
             playbackRateParam = "Slash.playbackRate";
-            swingEffectPrefab = HenryAssets.swordSwingEffect;
-            hitEffectPrefab = HenryAssets.swordHitImpactEffect;
+            //swingEffectPrefab = HenryAssets.swordSwingEffect;
+            hitEffectPrefab = HenryAssets.loaderHit;
 
-            impactSound = HenryAssets.swordHitSoundEvent.index;
+            //impactSound = HenryAssets.swordHitSoundEvent.index;
 
             base.OnEnter();
 
-            //punchVector = inputBank.aimDirection;
+            punchVector = inputBank.aimDirection;
             //characterDirection.forward = punchVector;
 
-            punchVector = GetAimRay().direction;
+            //punchVector = GetAimRay().direction;
             //characterMotor.velocity = punchVector * punchVelocity;
+          
+            //Util.PlaySound("Ora", gameObject);
+            GetComponent<StarPlatinum>().AddTime(duration);
         }
 
 
@@ -59,7 +67,8 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
         private bool hasKnockbackedSelf;
 
-        private float knockbackForce = 15f;
+        private float knockbackForce = 10f;
+
         public override void FixedUpdate()
         {
             base.FixedUpdate();
@@ -69,6 +78,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
             {
                 hasKnockbackedSelf = true;
                 characterMotor.velocity = -punchVector * knockbackForce;
+                //Util.PlaySound("OraHit", gameObject);
 
                 this.outer.SetNextStateToMain();
             }
@@ -89,20 +99,20 @@ namespace HenryMod.Survivors.Henry.SkillStates
             hasHit = true;
         }
 
-        protected override void PlayAttackAnimation()
-        {
-            PlayCrossfade("Gesture, Override", "Slash" + (1 + swingIndex), playbackRateParam, duration, 0.1f * duration);
-        }
+        //protected override void PlayAttackAnimation()
+        //{
+        //    PlayCrossfade("Gesture, Override", "Slash" + (1 + swingIndex), playbackRateParam, duration, 0.1f * duration);
+        //}
 
-        protected override void PlaySwingEffect()
-        {
-            base.PlaySwingEffect();
-        }
+        //protected override void PlaySwingEffect()
+        //{
+        //    base.PlaySwingEffect();
+        //}
 
-        private float speedCoefficientOnExit = 0.4f;
+        //private float speedCoefficientOnExit = 0.4f;
         public override void OnExit()
         {
-            base.characterMotor.velocity *= speedCoefficientOnExit;
+            //base.characterMotor.velocity *= speedCoefficientOnExit;
             base.OnExit();
         }
     }

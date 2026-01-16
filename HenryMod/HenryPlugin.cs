@@ -44,6 +44,20 @@ namespace HenryMod
 
             // make a content pack and add it. this has to be last
             new Modules.ContentPacks().Initialize();
+
+
+            //On.EntityStates.BasicMeleeAttack.OnEnter += (orig, self) =>
+            //{
+            //    orig(self);
+
+            //    Log.Info(self.swingEffectPrefab.name);              
+            //};
+
+            //On.RoR2.Util.PlaySound_string_GameObject += (orig, soundString, gameObject) =>
+            //{
+            //    Log.Info($"PlaySound: {soundString}");
+            //    return orig(soundString, gameObject);
+            //};
         }
     }
 }

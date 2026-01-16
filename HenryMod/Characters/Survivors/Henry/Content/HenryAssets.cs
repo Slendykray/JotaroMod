@@ -3,6 +3,8 @@ using UnityEngine;
 using HenryMod.Modules;
 using System;
 using RoR2.Projectile;
+using UnityEngine.AddressableAssets;
+using RoR2.Audio;
 
 namespace HenryMod.Survivors.Henry
 {
@@ -13,17 +15,22 @@ namespace HenryMod.Survivors.Henry
         public static GameObject swordHitImpactEffect;
 
         public static GameObject oraOraEffect;
+        public static GameObject ZaWarudoEffect;
 
         public static GameObject bombExplosionEffect;
 
         // networked hit sounds
         public static NetworkSoundEventDef swordHitSoundEvent;
 
+
         //projectiles
         public static GameObject bombProjectilePrefab;
 
         private static AssetBundle _assetBundle;
 
+        public static GameObject swingEffect;
+        public static GameObject loaderSwing;
+        public static GameObject loaderHit;
         public static void Init(AssetBundle assetBundle)
         {
 
@@ -45,6 +52,22 @@ namespace HenryMod.Survivors.Henry
             swordHitImpactEffect = _assetBundle.LoadEffect("ImpactHenrySlash");
 
             oraOraEffect = _assetBundle.LoadEffect("OraOraEffect", true);
+
+            ZaWarudoEffect = _assetBundle.LoadAsset<GameObject>("ZaWarudoEffect");
+
+            var loaderSwingPref = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/LoaderSwingBasic.prefab").WaitForCompletion();
+
+            loaderSwing = Asset.CreateEffect(loaderSwingPref, true);
+
+
+
+            swingEffect = _assetBundle.LoadEffect("SwingEffect", true);
+
+            loaderHit = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/OmniImpactVFXLoader.prefab").WaitForCompletion();
+
+
+
+
         }
 
         private static void CreateBombExplosionEffect()
