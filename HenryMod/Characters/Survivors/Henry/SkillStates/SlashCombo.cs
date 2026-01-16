@@ -32,43 +32,19 @@ namespace HenryMod.Survivors.Henry.SkillStates
             attackRecoil = 0.5f;
             hitHopVelocity = 6f;
              
-
-                        //swingSoundString = "HenrySwordSwing";
             swingSoundString = "Play_loader_m1_swing";
             hitSoundString = "Play_loader_m1_impact";
-            //hitSoundString = FireHook.fireSoundString;
+
+            swingEffectPrefab = HenryAssets.swingEffect;
+            hitEffectPrefab = HenryAssets.loaderHit;
+
             muzzleString = swingIndex % 2 == 0 ? "SwingLeft" : "SwingRight";
             playbackRateParam = "Slash.playbackRate";
-            //swingEffectPrefab = HenryAssets.swordSwingEffect;
-            swingEffectPrefab = HenryAssets.swingEffect;
-            //var loadedAsset = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/LoaderSwingBasic.prefab").WaitForCompletion();
-            //swingEffectPrefab = loadedAsset;
-            //hitEffectPrefab = HenryAssets.swordHitImpactEffect;
-            //hitEffectPrefab = HenryAssets.loaderHit;
 
-            //var loadedAsset2 = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/ImpactLoaderFistSmall.prefab").WaitForCompletion();
-            //var loadedAsset2 = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/OmniImpactVFXLoader.prefab").WaitForCompletion();
-            hitEffectPrefab = HenryAssets.loaderHit;
-            //impactSound = HenryAssets.swordHitSoundEvent.index;
-            //var loadedAsset1 = Addressables.LoadAssetAsync<NetworkSoundEventDef>("RoR2/Junk/Loader/nseLoaderM1Impact.asset").WaitForCompletion();
-            //impactSound = HenryAssets.loaderHitSound.index;
-            base.OnEnter();
-            GetComponent<StarPlatinum>().AddTime(duration);
-
-            swingEffectPrefab.GetComponent<DestroyOnTimer>().duration = baseDuration * attackEndPercentTime;
-
-
-//            GameObject loaderBody =
-//Addressables.LoadAssetAsync<GameObject>(
-//"RoR2/Base/Loader/LoaderBody.prefab"
-//).WaitForCompletion();
-//            var akObj = loaderBody.GetComponent<AkGameObj>();
-
-//            //o = Object.Instantiate(akObj, transform);
-//            AkSoundEngine.PostEvent("Play_loader_m1_swing", akObj.gameObject);
            
 
-            //RoR2.Audio.PointSoundManager.EmitSoundLocal((RoR2.Audio.AkEventIdArg)swingSoundString, gameObject.transform.position);
+            base.OnEnter();
+            GetComponent<StarPlatinum>().AddTime(duration);
         }
 
         protected override void PlayAttackAnimation()

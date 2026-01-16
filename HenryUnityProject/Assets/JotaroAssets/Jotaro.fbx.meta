@@ -15,12 +15,28 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
-    motionNodeName: <Root Transform>
-    rigImportErrors: "Avatar creation failed:\n\tTransform 'lower_leg.l' is not an
-      ancestor of 'foot.l'\n"
+    motionNodeName: 
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'ArmatureJotaro|AimYaw' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'stomach' has translation
+      animation that will be discarded.\n\nClip 'ArmatureJotaro|Idle' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'pelvis' has translation animation
+      that will be discarded.\n\t'pelvis' is inbetween humanoid transforms and has
+      rotation animation that will be discarded.\n\t'stomach' has translation animation
+      that will be discarded.\n\nClip 'ArmatureJotaro|IdleIn' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'lower_leg.l' has scale animation
+      that will be discarded.\n\t'lower_leg.r' has scale animation that will be discarded.\n\nClip
+      'ArmatureJotaro|RunStop' has import animation warnings that might lower retargeting
+      quality:\nNote: Activate translation DOF on avatar to improve retargeting quality.\n\t'pelvis'
+      has translation animation that will be discarded.\n\t'pelvis' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'lower_leg.r'
+      has scale animation that will be discarded.\n\t'stomach' has translation animation
+      that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -604,7 +620,7 @@ ModelImporter:
       scale: {x: 1, y: 0.99999976, z: 0.99999976}
     - name: base
       parentName: ROOT
-      position: {x: 0, y: 0.68675655, z: 0.027261144}
+      position: {x: 0, y: 0.6867569, z: 0.027261144}
       rotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 0.9999997, z: 0.9999997}
     - name: pelvis
@@ -697,14 +713,14 @@ ModelImporter:
       scale: {x: 1.0000005, y: 1.0000081, z: 0.99998945}
     - name: foot.l
       parentName: lower_leg.l
-      position: {x: 0.000000009313226, y: 0.24644436, z: 0.000000003259629}
-      rotation: {x: -0.45068616, y: -0.09308161, z: 0.08938644, w: 0.8833051}
-      scale: {x: 0.9999994, y: 1.0000145, z: 0.999986}
+      position: {x: 0.0000000069849193, y: 0.24644436, z: 0.0000000088475645}
+      rotation: {x: -0.45068616, y: -0.093081616, z: 0.089386486, w: 0.8833051}
+      scale: {x: 0.999999, y: 1.000018, z: 0.99998295}
     - name: toe.l
       parentName: foot.l
-      position: {x: 2.3283064e-10, y: 0.113382794, z: 0.0000000041909516}
-      rotation: {x: -0.31116003, y: 0.16892013, z: -0.0041009, w: 0.9352159}
-      scale: {x: 1.0000144, y: 0.9999038, z: 1.0000823}
+      position: {x: -0.0000000088475645, y: 0.1133828, z: 0.000000006519258}
+      rotation: {x: -0.31116015, y: 0.16892014, z: -0.004100904, w: 0.9352158}
+      scale: {x: 1.0000144, y: 0.999903, z: 1.0000818}
     - name: Pocket_Left
       parentName: pelvis
       position: {x: -0.09963699, y: -0.013166908, z: -0.0890854}
@@ -722,14 +738,14 @@ ModelImporter:
       scale: {x: 0.9999998, y: 1.000009, z: 0.9999947}
     - name: foot.r
       parentName: lower_leg.r
-      position: {x: -0.000000007450581, y: 0.24709179, z: -0.000000010244548}
-      rotation: {x: -0.46851727, y: 0.09142445, z: -0.0904341, w: 0.87404513}
-      scale: {x: 0.99999964, y: 1.0000198, z: 0.99998325}
+      position: {x: 0.000000014901161, y: 0.24709176, z: -0.000000010244548}
+      rotation: {x: -0.46851727, y: 0.091424465, z: -0.09043411, w: 0.87404513}
+      scale: {x: 0.99999714, y: 1.0000267, z: 0.9999786}
     - name: toe.r
       parentName: foot.r
-      position: {x: 0.000000017229468, y: 0.11636793, z: -0.00000001071021}
-      rotation: {x: -0.29906654, y: -0.16854653, z: 0.004542615, w: 0.93921804}
-      scale: {x: 1.0000168, y: 0.9998886, z: 1.0000947}
+      position: {x: -0.000000016763806, y: 0.1163679, z: -0.0000000018626451}
+      rotation: {x: -0.29906654, y: -0.16854656, z: 0.0045425915, w: 0.93921804}
+      scale: {x: 1.0000172, y: 0.9998886, z: 1.0000945}
     - name: Pocket_Right
       parentName: pelvis
       position: {x: 0.09963569, y: -0.013165483, z: -0.08908644}
@@ -1076,7 +1092,7 @@ ModelImporter:
     feetSpacing: 0
     globalScale: 0.5
     rootMotionBoneName: 
-    hasTranslationDoF: 1
+    hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}

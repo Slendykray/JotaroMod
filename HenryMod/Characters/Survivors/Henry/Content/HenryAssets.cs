@@ -31,13 +31,15 @@ namespace HenryMod.Survivors.Henry
         public static GameObject swingEffect;
         public static GameObject loaderSwing;
         public static GameObject loaderHit;
+
+        public static GameObject emotePrefab;
         public static void Init(AssetBundle assetBundle)
         {
-
+             
             _assetBundle = assetBundle;
 
             swordHitSoundEvent = Content.CreateAndAddNetworkSoundEventDef("HenrySwordHit");
-
+    
             CreateEffects();
 
             CreateProjectiles();
@@ -66,7 +68,7 @@ namespace HenryMod.Survivors.Henry
             loaderHit = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/OmniImpactVFXLoader.prefab").WaitForCompletion();
 
 
-
+            emotePrefab = _assetBundle.LoadAsset<GameObject>("animJotaro"); // Load your body emote 
 
         }
 

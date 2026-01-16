@@ -15,15 +15,7 @@ AvatarMask:
     m_Weight: 0
   - m_Path: ArmatureJotaro/heelIK.l
     m_Weight: 0
-  - m_Path: ArmatureJotaro/heelIK.l/foot.l
-    m_Weight: 0
-  - m_Path: ArmatureJotaro/heelIK.l/foot.l/toe.l
-    m_Weight: 0
   - m_Path: ArmatureJotaro/heelIK.r
-    m_Weight: 0
-  - m_Path: ArmatureJotaro/heelIK.r/foot.r
-    m_Weight: 0
-  - m_Path: ArmatureJotaro/heelIK.r/foot.r/toe.r
     m_Weight: 0
   - m_Path: ArmatureJotaro/kneeIK.l
     m_Weight: 0
@@ -75,9 +67,17 @@ AvatarMask:
     m_Weight: 0
   - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.l/lower_leg.l
     m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.l/lower_leg.l/foot.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.l/lower_leg.l/foot.l/toe.l
+    m_Weight: 0
   - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.r
     m_Weight: 0
   - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.r/lower_leg.r
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.r/lower_leg.r/foot.r
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.r/lower_leg.r/foot.r/toe.r
     m_Weight: 0
   - m_Path: ArmatureJotaro/ROOT/base/stomach
     m_Weight: 1
@@ -198,6 +198,4 @@ AvatarMask:
   - m_Path: Coat
     m_Weight: 0
   - m_Path: Eyes
-    m_Weight: 0
-  - m_Path: Face
     m_Weight: 0

@@ -450,10 +450,14 @@ namespace HenryMod.Survivors.Henry
 
             //if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.rune580.riskofoptions"))
             //{
-            //    //TryRegisterOption(configEntry, min, max, restartRequired);
-
-            //    CustomEmotesAPI.ImportArmature(bodyPrefab, emotePrefab);
+            
             //}
+
+            On.RoR2.SurvivorCatalog.Init += (orig) =>
+            {
+                orig();
+                EmotesAPI.CustomEmotesAPI.ImportArmature(bodyPrefab, HenryAssets.emotePrefab);             
+            };
         }
 
 

@@ -38,7 +38,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
              
              
             swingSoundString = "OraMega";
-            hitSoundString = "Play_loader_m1_impact";
+            //hitSoundString = "Play_loader_m1_impact";
             muzzleString = swingIndex % 2 == 0 ? "SwingLeft" : "SwingRight";
             playbackRateParam = "Slash.playbackRate";
             //swingEffectPrefab = HenryAssets.swordSwingEffect;
@@ -48,13 +48,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
             base.OnEnter();
 
-            punchVector = inputBank.aimDirection;
-            //characterDirection.forward = punchVector;
-
-            //punchVector = GetAimRay().direction;
-            //characterMotor.velocity = punchVector * punchVelocity;
-          
-            //Util.PlaySound("Ora", gameObject);
             GetComponent<StarPlatinum>().AddTime(duration);
         }
 
@@ -73,20 +66,13 @@ namespace HenryMod.Survivors.Henry.SkillStates
         {
             base.FixedUpdate();
            
-
             if (hasHit && !hasKnockbackedSelf && !inHitPause)
             {
                 hasKnockbackedSelf = true;
-                characterMotor.velocity = -punchVector * knockbackForce;
-                //Util.PlaySound("OraHit", gameObject);
+                characterMotor.velocity = -inputBank.aimDirection * knockbackForce;
 
                 this.outer.SetNextStateToMain();
             }
-            //else
-            //{
-            //    base.characterMotor.velocity = punchVector * punchVelocity;
-            //    base.characterDirection.forward = punchVector;
-            //}
         }
 
         protected override void OnHitEnemyAuthority()
@@ -109,10 +95,8 @@ namespace HenryMod.Survivors.Henry.SkillStates
         //    base.PlaySwingEffect();
         //}
 
-        //private float speedCoefficientOnExit = 0.4f;
         public override void OnExit()
         {
-            //base.characterMotor.velocity *= speedCoefficientOnExit;
             base.OnExit();
         }
     }
