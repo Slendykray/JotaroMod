@@ -62,10 +62,6 @@ namespace HenryMod.Survivors.Henry
                 },
                 new CustomRendererInfo
                 {
-                    childName = "Coat",  
-                },
-                new CustomRendererInfo
-                {
                     childName = "Eyes",
                 },
                 
@@ -447,10 +443,10 @@ namespace HenryMod.Survivors.Henry
         {
             R2API.RecalculateStatsAPI.GetStatCoefficients += RecalculateStatsAPI_GetStatCoefficients;
             StopTime.TimeStopHooks();
-
+            //[Info: R2API] com.weliveinasociety.CustomEmotesAPI; 2.11.0
             //if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.rune580.riskofoptions"))
             //{
-            
+
             //}
 
             On.RoR2.SurvivorCatalog.Init += (orig) =>

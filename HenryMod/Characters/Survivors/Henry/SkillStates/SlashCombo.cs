@@ -30,13 +30,13 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
             hitStopDuration = 0.012f;
             attackRecoil = 0.5f;
-            hitHopVelocity = 6f;
+            hitHopVelocity = 3f;
              
             swingSoundString = "Play_loader_m1_swing";
             hitSoundString = "Play_loader_m1_impact";
 
             swingEffectPrefab = HenryAssets.swingEffect;
-            hitEffectPrefab = HenryAssets.loaderHit;
+            hitEffectPrefab = HenryAssets.impactEffect;
 
             muzzleString = swingIndex % 2 == 0 ? "SwingLeft" : "SwingRight";
             playbackRateParam = "Slash.playbackRate";
@@ -49,7 +49,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
         protected override void PlayAttackAnimation()
         {
-            PlayCrossfade("Gesture, Override", "Slash" + (1 + swingIndex), playbackRateParam, duration, 0.1f * duration);
+            //PlayCrossfade("Gesture, Override", "Slash" + (1 + swingIndex), playbackRateParam, duration, 0.1f * duration);
         }
 
         protected override void PlaySwingEffect()

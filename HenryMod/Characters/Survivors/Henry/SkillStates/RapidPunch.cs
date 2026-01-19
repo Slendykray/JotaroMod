@@ -8,11 +8,11 @@ using UnityEngine;
 using System.Linq;
 
 using HenryMod.Survivors.Henry.Components;
-using UnityEngine.AddressableAssets;
+using System.Collections.Generic;
 
 namespace HenryMod.Survivors.Henry.SkillStates  
 {
-    public class RapidPunch : BaseSkillState
+    public class RapidPunch : BaseState
     {
 
         private float stopwatch;
@@ -29,11 +29,13 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
         private GameObject oraFX;
 
+        private float attackRecoil = 2f;
+
         public override void OnEnter()
         {           
             base.OnEnter();
 
-            this.overlapAttack = base.InitMeleeOverlap(HenryStaticValues.rapidPunchDamageCoefficient, HenryAssets.loaderHit, base.GetModelTransform(), "PunchGroup");
+            this.overlapAttack = base.InitMeleeOverlap(HenryStaticValues.rapidPunchDamageCoefficient, HenryAssets.impactEffect, base.GetModelTransform(), "PunchGroup");
 
             this.overlapAttack.damageType.damageSource = DamageSource.Utility;
 
@@ -44,9 +46,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             Util.PlaySound("Play_OraOra", gameObject);
           
         }
-
-
-        private float attackRecoil = 2f;
 
         public override void FixedUpdate()
         {
@@ -70,18 +69,37 @@ namespace HenryMod.Survivors.Henry.SkillStates
                 {
                     AddRecoil(-1f * attackRecoil, -2f * attackRecoil, -0.5f * attackRecoil, 0.5f * attackRecoil);
                 }
-
-
-
+    
 
                 overlapAttack.ResetIgnoredHealthComponents();
 
-                if (!overlapAttack.Fire() && stopwatch >= minDuration && isAuthority)
+                List<HurtBox> hitResults = new List<HurtBox>();
+
+                if (!overlapAttack.Fire(hitResults) && stopwatch >= minDuration && isAuthority)
                 {
                     outer.SetNextStateToMain();                        
                 }
-                   
 
+                for (int i = 0; i < hitResults.Count; i++)
+                {
+                    HealthComponent healthComponent = hitResults[i].healthComponent;
+                    if (healthComponent)
+                    {
+                        Vector3 force = Vector3.zero;
+                        CharacterMotor motor = healthComponent.body.characterMotor;
+                        if (motor)
+                        {
+                            motor.velocity = force;
+                        }
+
+                        Rigidbody rb = healthComponent.body.rigidbody;
+                        if (rb)
+                        {
+                            rb.velocity = force;
+                        }
+
+                    }
+                }
 
             }
 

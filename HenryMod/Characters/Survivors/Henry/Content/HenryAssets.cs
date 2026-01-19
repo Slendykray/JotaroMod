@@ -14,9 +14,6 @@ namespace HenryMod.Survivors.Henry
         public static GameObject swordSwingEffect;
         public static GameObject swordHitImpactEffect;
 
-        public static GameObject oraOraEffect;
-        public static GameObject ZaWarudoEffect;
-
         public static GameObject bombExplosionEffect;
 
         // networked hit sounds
@@ -29,8 +26,12 @@ namespace HenryMod.Survivors.Henry
         private static AssetBundle _assetBundle;
 
         public static GameObject swingEffect;
-        public static GameObject loaderSwing;
-        public static GameObject loaderHit;
+        public static GameObject impactEffect;
+
+        public static GameObject oraOraEffect;
+        public static GameObject ZaWarudoEffect;
+        //public static GameObject loaderSwing;
+        //public static GameObject loaderHit;
 
         public static GameObject emotePrefab;
         public static void Init(AssetBundle assetBundle)
@@ -57,18 +58,20 @@ namespace HenryMod.Survivors.Henry
 
             ZaWarudoEffect = _assetBundle.LoadAsset<GameObject>("ZaWarudoEffect");
 
-            var loaderSwingPref = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/LoaderSwingBasic.prefab").WaitForCompletion();
-
-            loaderSwing = Asset.CreateEffect(loaderSwingPref, true);
-
-
-
             swingEffect = _assetBundle.LoadEffect("SwingEffect", true);
 
-            loaderHit = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/OmniImpactVFXLoader.prefab").WaitForCompletion();
-
+            impactEffect = _assetBundle.LoadEffect("ImpactEffect", true);
 
             emotePrefab = _assetBundle.LoadAsset<GameObject>("animJotaro"); // Load your body emote 
+
+            //var loaderSwingPref = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/LoaderSwingBasic.prefab").WaitForCompletion();
+
+            //loaderSwing = Asset.CreateEffect(loaderSwingPref, true);
+
+            //loaderHit = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/OmniImpactVFXLoader.prefab").WaitForCompletion();
+
+
+            
 
         }
 

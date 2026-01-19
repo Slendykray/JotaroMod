@@ -11,7 +11,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
     public class BaseDash : BaseSkillState
     {
 
-        private Vector3 dashVector;
+        protected Vector3 dashVector;
 
         private float stopwatch;
 
@@ -28,8 +28,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             base.OnEnter();
 
             PlayAnimation("FullBody, Override", "Dash", "Dash.playbackRate", duration * 2);
-
-            //GetComponent<StarPlatinum>().AddTime(duration);
 
             dashVector = inputBank.aimDirection;
             GetComponent<AimBuffer>().direction = dashVector;

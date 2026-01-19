@@ -20,6 +20,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
             nextState = new Punch();
         }
-    
+
     }
 }

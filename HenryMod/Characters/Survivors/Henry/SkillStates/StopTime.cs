@@ -1,37 +1,16 @@
 ﻿using EntityStates;
-
-
 using RoR2;
-
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
 using UnityEngine.Rendering.PostProcessing;
-
-
 using EntityStates.ClayBruiser.Weapon;
 using EntityStates.GolemMonster;
 using EntityStates.TitanMonster;
-
 using RoR2.Orbs;
 using RoR2.Projectile;
 using EntityStates.Wisp1Monster;
 using EntityStates.GreaterWispMonster;
-
-
-using EntityStates.SolusAmalgamator;
-
-//using EntityStates.
-using System;
-//using On.EntityStates;
-//using On.EntityStates.ClayBruiser.Weapon;
-//using On.EntityStates.GolemMonster;
-//using On.EntityStates.TitanMonster;
-//using On.RoR2;
-//using On.RoR2.Orbs;
-//using On.RoR2.Projectile;
-
 using R2API.Utils;
 
 namespace HenryMod.Survivors.Henry.SkillStates
@@ -178,38 +157,21 @@ namespace HenryMod.Survivors.Henry.SkillStates
             base.OnExit();        
         }
 
-        //wisp
-        //anc wisp
-        //scorch worm
-        //solus prospector
+
+
         #region Hooks
         public static void TimeStopHooks()
         {
             On.RoR2.CombatDirector.Simulate += CombatDirector_Simulate_Hook;
-
             On.RoR2.Run.ShouldUpdateRunStopwatch += Run_ShouldUpdateRunStopwatch_Hook;
 
-
             On.RoR2.Projectile.ProjectileSimple.FixedUpdate += ProjectileSimple_FixedUpdate_Hook;
-
             On.RoR2.Orbs.OrbManager.FixedUpdate += OrbManager_FixedUpdate_Hook;
             On.RoR2.Orbs.OrbEffect.UpdateOrb += OrbEffect_UpdateOrb_Hook;
-
-            //SetStateOnHurt.SetFrozen += new SetStateOnHurt.hook_SetFrozen(StopTime.SetStateOnHurt_SetFrozen_Hook);
-            //SetStateOnHurt.SetStun += new SetStateOnHurt.hook_SetStun(StopTime.SetStateOnHurt_SetStun_Hook);
-            //SetStateOnHurt.SetPain += new SetStateOnHurt.hook_SetPain(StopTime.SetStateOnHurt_SetPain_Hook);
-
             On.RoR2.Projectile.ProjectileImpactExplosion.FixedUpdate += ProjectileImpactExplosion_FixedUpdate_Hook;
-
             On.RoR2.RigidbodyMotor.FixedUpdate += RigidbodyMotor_FixedUpdate_Hook;
-
             On.RoR2.DelayBlast.FixedUpdate += DelayBlast_FixedUpdate_Hook;
             On.RoR2.DestroyOnTimer.FixedUpdate += DestroyOnTimer_FixedUpdate_Hook;
-            //
-            On.EntityStates.Wisp1Monster.ChargeEmbers.Update += ChargeEmbers_Update;
-            On.EntityStates.Wisp1Monster.ChargeEmbers.FixedUpdate += ChargeEmbers_FixedUpdate;
-            On.EntityStates.GreaterWispMonster.ChargeCannons.FixedUpdate += ChargeCannons_FixedUpdate;
-            //On.EntityStates.SolusAmalgamator.Thruster.FixedUpdate += Thruster_FixedUpdate;
 
             On.EntityStates.GolemMonster.ChargeLaser.Update += ChargeLaser_Update;
             On.EntityStates.GolemMonster.ChargeLaser.FixedUpdate += ChargeLaser_FixedUpdate;
@@ -218,11 +180,13 @@ namespace HenryMod.Survivors.Henry.SkillStates
             On.EntityStates.TitanMonster.FireMegaLaser.FixedUpdate += FireMegaLaser_FixedUpdate_Hook;
             On.EntityStates.TitanMonster.ChargeGoldMegaLaser.FixedUpdate += ChargeGoldMegaLaser_FixedUpdate_Hook;
             On.EntityStates.TitanMonster.FireGoldMegaLaser.FixedUpdate += FireGoldMegaLaser_FixedUpdate_Hook;
-
             On.RoR2.WormBodyPositionsDriver.FixedUpdateServer += WormBodyPositionsDriver_FixedUpdateServer_Hook;
             On.RoR2.WormBodyPositions2.OnDeathStart += WormBodyPositions2_OnDeathStart_Hook;
-
             On.EntityStates.ClayBruiser.Weapon.MinigunFire.FixedUpdate += MinigunFire_FixedUpdate_Hook;
+
+            On.EntityStates.Wisp1Monster.ChargeEmbers.Update += ChargeEmbers_Update;
+            On.EntityStates.Wisp1Monster.ChargeEmbers.FixedUpdate += ChargeEmbers_FixedUpdate;
+            On.EntityStates.GreaterWispMonster.ChargeCannons.FixedUpdate += ChargeCannons_FixedUpdate;
 
         }
        
@@ -262,7 +226,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
                 Rigidbody component = self.GetComponent<Rigidbody>();
                 if (component != null)
                 {
-                    //component.velocity = Vector3.zero;
                     component.velocity = StopTime.GenerateTimeStopFrozenVelocity(component);
                     component.angularVelocity = Vector3.zero;
                     return;
@@ -274,7 +237,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x0600001E RID: 30 RVA: 0x00002AEF File Offset: 0x00000CEF
         private static void OrbManager_FixedUpdate_Hook(On.RoR2.Orbs.OrbManager.orig_FixedUpdate orig, OrbManager self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -283,7 +245,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x0600001F RID: 31 RVA: 0x00002AFF File Offset: 0x00000CFF
         private static void OrbEffect_UpdateOrb_Hook(On.RoR2.Orbs.OrbEffect.orig_UpdateOrb orig, OrbEffect self, float deltaTime)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -292,36 +253,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-
-
-        //// Token: 0x06000021 RID: 33 RVA: 0x00002B25 File Offset: 0x00000D25
-        //private static void SetStateOnHurt_SetPain_Hook(SetStateOnHurt.orig_SetPain orig, SetStateOnHurt self)
-        //{
-        //    if (!StopTime.TIMESTOP_ACTIVE)
-        //    {
-        //        orig.Invoke(self);
-        //    }
-        //}
-
-        //// Token: 0x06000022 RID: 34 RVA: 0x00002B35 File Offset: 0x00000D35
-        //private static void SetStateOnHurt_SetStun_Hook(SetStateOnHurt.orig_SetStun orig, SetStateOnHurt self, float duration)
-        //{
-        //    if (!StopTime.TIMESTOP_ACTIVE)
-        //    {
-        //        orig.Invoke(self, duration);
-        //    }
-        //}
-
-        //// Token: 0x06000023 RID: 35 RVA: 0x00002B46 File Offset: 0x00000D46
-        //private static void SetStateOnHurt_SetFrozen_Hook(SetStateOnHurt.orig_SetFrozen orig, SetStateOnHurt self, float duration)
-        //{
-        //    if (!StopTime.TIMESTOP_ACTIVE)
-        //    {
-        //        orig.Invoke(self, duration);
-        //    }
-        //}
-
-        // Token: 0x06000024 RID: 36 RVA: 0x00002B57 File Offset: 0x00000D57
         private static void ProjectileImpactExplosion_FixedUpdate_Hook(On.RoR2.Projectile.ProjectileImpactExplosion.orig_FixedUpdate orig, ProjectileImpactExplosion self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -338,7 +269,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
                 return;
             }
             self.rigid.velocity = StopTime.GenerateTimeStopFrozenVelocity(self.rigid);
-            //self.rigid.velocity = Vector3.zero;
         }
 
 
@@ -365,16 +295,8 @@ namespace HenryMod.Survivors.Henry.SkillStates
                 orig.Invoke(self);
             }
         }
-        //private static void Thruster_FixedUpdate(On.EntityStates.SolusAmalgamator.Thruster.orig_FixedUpdate orig, Thruster self)
-        //{
-        //    if (!StopTime.TIMESTOP_ACTIVE)
-        //    {
-        //        orig.Invoke(self);
-        //    }
-        //}
 
 
-        // Token: 0x06000025 RID: 37 RVA: 0x00002B67 File Offset: 0x00000D67
         private static void ChargeLaser_FixedUpdate(On.EntityStates.GolemMonster.ChargeLaser.orig_FixedUpdate orig, ChargeLaser self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -383,7 +305,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x06000026 RID: 38 RVA: 0x00002B77 File Offset: 0x00000D77
         private static void ChargeLaser_Update(On.EntityStates.GolemMonster.ChargeLaser.orig_Update orig, ChargeLaser self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -392,7 +313,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x06000027 RID: 39 RVA: 0x00002B87 File Offset: 0x00000D87
         private static void ChargeMegaLaser_FixedUpdate_Hook(On.EntityStates.TitanMonster.ChargeMegaLaser.orig_FixedUpdate orig, ChargeMegaLaser self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -401,7 +321,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x06000028 RID: 40 RVA: 0x00002B97 File Offset: 0x00000D97
         private static void ChargeMegaLaser_Update_Hook(On.EntityStates.TitanMonster.ChargeMegaLaser.orig_Update orig, ChargeMegaLaser self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -410,7 +329,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x06000029 RID: 41 RVA: 0x00002BA7 File Offset: 0x00000DA7
         private static void FireMegaLaser_FixedUpdate_Hook(On.EntityStates.TitanMonster.FireMegaLaser.orig_FixedUpdate orig, FireMegaLaser self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -419,7 +337,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x0600002A RID: 42 RVA: 0x00002BB7 File Offset: 0x00000DB7
         private static void ChargeGoldMegaLaser_FixedUpdate_Hook(On.EntityStates.TitanMonster.ChargeGoldMegaLaser.orig_FixedUpdate orig, ChargeGoldMegaLaser self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -428,7 +345,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x0600002B RID: 43 RVA: 0x00002BC7 File Offset: 0x00000DC7
         private static void FireGoldMegaLaser_FixedUpdate_Hook(On.EntityStates.TitanMonster.FireGoldMegaLaser.orig_FixedUpdate orig, FireGoldMegaLaser self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -437,7 +353,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x0600002C RID: 44 RVA: 0x00002BD7 File Offset: 0x00000DD7
         private static void WormBodyPositions2_OnDeathStart_Hook(On.RoR2.WormBodyPositions2.orig_OnDeathStart orig, WormBodyPositions2 self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -446,7 +361,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x0600002D RID: 45 RVA: 0x00002BE7 File Offset: 0x00000DE7
         private static void WormBodyPositionsDriver_FixedUpdateServer_Hook(On.RoR2.WormBodyPositionsDriver.orig_FixedUpdateServer orig, WormBodyPositionsDriver self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -457,7 +371,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             self.chaserVelocity = Vector3.zero;
         }
 
-        // Token: 0x0600002E RID: 46 RVA: 0x00002C03 File Offset: 0x00000E03
         private static void DelayBlast_FixedUpdate_Hook(On.RoR2.DelayBlast.orig_FixedUpdate orig, DelayBlast self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -466,7 +379,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x0600002F RID: 47 RVA: 0x00002C13 File Offset: 0x00000E13
         private static void DestroyOnTimer_FixedUpdate_Hook(On.RoR2.DestroyOnTimer.orig_FixedUpdate orig, DestroyOnTimer self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)
@@ -475,7 +387,6 @@ namespace HenryMod.Survivors.Henry.SkillStates
             }
         }
 
-        // Token: 0x06000030 RID: 48 RVA: 0x00002C23 File Offset: 0x00000E23
         private static void MinigunFire_FixedUpdate_Hook(On.EntityStates.ClayBruiser.Weapon.MinigunFire.orig_FixedUpdate orig, MinigunFire self)
         {
             if (!StopTime.TIMESTOP_ACTIVE)

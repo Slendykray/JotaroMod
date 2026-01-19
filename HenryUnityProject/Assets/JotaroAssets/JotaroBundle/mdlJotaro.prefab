@@ -140,8 +140,6 @@ MonoBehaviour:
   transformPairs:
   - name: Eyes
     transform: {fileID: 569088216962061652}
-  - name: Coat
-    transform: {fileID: 1656484818890186378}
   - name: Body
     transform: {fileID: 8090082443760201621}
   - name: MainHurtbox
@@ -151,47 +149,47 @@ MonoBehaviour:
   - name: PunchHitbox
     transform: {fileID: 7376701897507373395}
   - name: Root
-    transform: {fileID: 3494471690522453829}
+    transform: {fileID: 0}
   - name: Base
-    transform: {fileID: 3220267856705433098}
+    transform: {fileID: 0}
   - name: Head
-    transform: {fileID: 3509690387500092821}
+    transform: {fileID: 0}
   - name: HeadCenter
     transform: {fileID: 3509690387500092821}
   - name: Chest
-    transform: {fileID: 4785353352468840584}
+    transform: {fileID: 0}
   - name: HandL
-    transform: {fileID: 7418660926551820102}
+    transform: {fileID: 0}
   - name: HandR
-    transform: {fileID: 6381200192987696727}
+    transform: {fileID: 0}
   - name: SwingCenter
     transform: {fileID: 6458978905384375279}
   - name: Pelvis
-    transform: {fileID: 4436515250529941473}
+    transform: {fileID: 0}
   - name: UpperArmL
-    transform: {fileID: 7975283410146087218}
+    transform: {fileID: 0}
   - name: LowerArmL
-    transform: {fileID: 1978069878913615592}
+    transform: {fileID: 0}
   - name: UpperArmR
-    transform: {fileID: 7505067164479974911}
+    transform: {fileID: 0}
   - name: LowerArmR
-    transform: {fileID: 2928358208609073378}
+    transform: {fileID: 0}
   - name: ThighL
-    transform: {fileID: 1875018526933566752}
+    transform: {fileID: 0}
   - name: CalfL
-    transform: {fileID: 5725227101450017672}
+    transform: {fileID: 0}
   - name: ThighR
-    transform: {fileID: 152255531669218338}
+    transform: {fileID: 0}
   - name: CalfR
-    transform: {fileID: 5725227101450017672}
+    transform: {fileID: 0}
   - name: SwingLeft
     transform: {fileID: 1588917076}
   - name: SwingRight
     transform: {fileID: 304081779}
   - name: FootR
-    transform: {fileID: 510158092447724913}
+    transform: {fileID: 1811282238155184722}
   - name: FootL
-    transform: {fileID: 7954550967608613486}
+    transform: {fileID: 7897023493582536104}
   - name: StarPlatinum
     transform: {fileID: 1021990720892720418}
 --- !u!114 &7238953315125949139
@@ -1173,12 +1171,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 752641194869026835}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &510158092447724913 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 965346164442219874, guid: b97d6ddc09d79074485f62b41f069fa1,
-    type: 3}
-  m_PrefabInstance: {fileID: 752641194869026835}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &569088216962061652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 978448362646545735, guid: b97d6ddc09d79074485f62b41f069fa1,
@@ -1191,9 +1183,9 @@ CapsuleCollider:
     type: 3}
   m_PrefabInstance: {fileID: 752641194869026835}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1656484818890186378 stripped
+--- !u!4 &1811282238155184722 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2057281944264683161, guid: b97d6ddc09d79074485f62b41f069fa1,
+  m_CorrespondingSourceObject: {fileID: 1392488271594433089, guid: b97d6ddc09d79074485f62b41f069fa1,
     type: 3}
   m_PrefabInstance: {fileID: 752641194869026835}
   m_PrefabAsset: {fileID: 0}
@@ -1218,18 +1210,6 @@ Transform:
 --- !u!4 &2928358208609073378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2509197046301346033, guid: b97d6ddc09d79074485f62b41f069fa1,
-    type: 3}
-  m_PrefabInstance: {fileID: 752641194869026835}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3220267856705433098 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2792613986832965145, guid: b97d6ddc09d79074485f62b41f069fa1,
-    type: 3}
-  m_PrefabInstance: {fileID: 752641194869026835}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3494471690522453829 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4183615704244787030, guid: b97d6ddc09d79074485f62b41f069fa1,
     type: 3}
   m_PrefabInstance: {fileID: 752641194869026835}
   m_PrefabAsset: {fileID: 0}
@@ -1269,21 +1249,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 752641194869026835}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &6381200192987696727 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5980631776065879620, guid: b97d6ddc09d79074485f62b41f069fa1,
-    type: 3}
-  m_PrefabInstance: {fileID: 752641194869026835}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6951904030374924565 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7641470366222967046, guid: b97d6ddc09d79074485f62b41f069fa1,
-    type: 3}
-  m_PrefabInstance: {fileID: 752641194869026835}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7418660926551820102 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7819810136201852757, guid: b97d6ddc09d79074485f62b41f069fa1,
     type: 3}
   m_PrefabInstance: {fileID: 752641194869026835}
   m_PrefabAsset: {fileID: 0}
@@ -1293,9 +1261,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 752641194869026835}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &7954550967608613486 stripped
+--- !u!4 &7897023493582536104 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7211906601831328381, guid: b97d6ddc09d79074485f62b41f069fa1,
+  m_CorrespondingSourceObject: {fileID: 7486730989441961403, guid: b97d6ddc09d79074485f62b41f069fa1,
     type: 3}
   m_PrefabInstance: {fileID: 752641194869026835}
   m_PrefabAsset: {fileID: 0}

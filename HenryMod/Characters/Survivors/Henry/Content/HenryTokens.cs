@@ -21,16 +21,16 @@ namespace HenryMod.Survivors.Henry
         {
             string prefix = HenrySurvivor.HENRY_PREFIX;
 
-            string desc = "Jotaro is nuts.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine
-             + "< ! > If fully utilized, Ora-Ora does a lot of damage and procs." + Environment.NewLine + Environment.NewLine
-             + "< ! > Use ZA WARUDO and ORA to get yourself a good opening." + Environment.NewLine + Environment.NewLine
-             + "< ! > You can cancel out of Ora-Ora with ORA." + Environment.NewLine + Environment.NewLine           
-             + "< ! > lol." + Environment.NewLine + Environment.NewLine;
-    
+            //string desc = "Jotaro is nuts.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine
+            // + "< ! > If fully utilized, Ora-Ora does a lot of damage and procs." + Environment.NewLine + Environment.NewLine
+            // + "< ! > Use ZA WARUDO and ORA to get yourself a good opening." + Environment.NewLine + Environment.NewLine
+            // + "< ! > You can cancel out of Ora-Ora with ORA." + Environment.NewLine + Environment.NewLine           
+            // + "< ! > lol." + Environment.NewLine + Environment.NewLine;
+            string desc = "..yare yare daze.";
 
             string outro = "..yare yare daze.";
             string outroFailure = "..yare yare daze.";
-            string lore = "So, Za Warudo is the same type of stand as Star Platinum..";
+            string lore = "So Za Warudo is the same type of stand as Star Platinum..";
 
             Language.Add(prefix + "NAME", "Jotaro");
             Language.Add(prefix + "DESCRIPTION", desc);
@@ -61,7 +61,7 @@ namespace HenryMod.Survivors.Henry
             Language.Add(prefix + "SECONDARY_GUN_DESCRIPTION", Tokens.agilePrefix + $"Fire a handgun for <style=cIsDamage>{100f * HenryStaticValues.gunDamageCoefficient}% damage</style>.");
 
             Language.Add(prefix + "SECONDARY_PUNCH_NAME", "ORA!");
-            Language.Add(prefix + "SECONDARY_PUNCH_DESCRIPTION", $"<style=cIsUtility>Dash</style>. <style=cIsDamage>Stunning</style>. Punch for <style=cIsDamage>{100f * HenryStaticValues.punchDamageCoefficient}% damage</style>.");
+            Language.Add(prefix + "SECONDARY_PUNCH_DESCRIPTION", $"<style=cIsUtility>Dash</style>. <style=cIsDamage>Stunning</style>. Launch enemies for <style=cIsDamage>{100f * HenryStaticValues.punchDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Utility
