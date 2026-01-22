@@ -26,7 +26,7 @@ namespace HenryMod.Survivors.Henry
         public override string modelPrefabName => "mdlJotaro";
         public override string displayPrefabName => "JotaroDisplay";
 
-        public const string HENRY_PREFIX = HenryPlugin.DEVELOPER_PREFIX + "_HENRY_";
+        public const string HENRY_PREFIX = HenryPlugin.DEVELOPER_PREFIX + "_JOTARO_";
 
         //used when registering your survivor's language tokens
         public override string survivorTokenPrefix => HENRY_PREFIX;
@@ -46,7 +46,7 @@ namespace HenryMod.Survivors.Henry
             crosshair = Asset.LoadCrosshair("SimpleDot"),
             podPrefab = LegacyResourcesAPI.Load<GameObject>("Prefabs/NetworkedObjects/SurvivorPod"),
 
-            maxHealth = 130f,
+            maxHealth = 160f,
             healthRegen = 1.5f,
             armor = 20f,
             moveSpeed = 7f,
@@ -114,15 +114,17 @@ namespace HenryMod.Survivors.Henry
 
             AddHooks();
         }
-
+         
         private void AdditionalBodySetup()
         {
             AddHitboxes();
-            bodyPrefab.AddComponent<HenryWeaponComponent>();
-            bodyPrefab.AddComponent<StarPlatinum>();
-            bodyPrefab.AddComponent<AimBuffer>();
+            //bodyPrefab.AddComponent<HenryWeaponComponent>();
             //bodyPrefab.AddComponent<HuntressTrackerComopnent>();
             //anything else here
+
+            bodyPrefab.AddComponent<StarPlatinum>();
+
+            displayPrefab.AddComponent<MenuSound>();
         }
 
         public void AddHitboxes()
@@ -244,9 +246,10 @@ namespace HenryMod.Survivors.Henry
             Skills.CreateGenericSkillWithSkillFamily(bodyPrefab, SkillSlot.Secondary);
 
             //here is a basic skill def with all fields accounted for
+           
             //punch
-             
-            SkillDef secondarySkillDef2 = Skills.CreateSkillDef(new SkillDefInfo
+
+            SkillDef secondarySkillDef1 = Skills.CreateSkillDef(new SkillDefInfo
             {
                 skillName = "JotaroMegaPunch",
                 skillNameToken = HENRY_PREFIX + "SECONDARY_PUNCH_NAME",
@@ -255,6 +258,42 @@ namespace HenryMod.Survivors.Henry
                 skillIcon = assetBundle.LoadAsset<Sprite>("texSecondaryIcon"),
 
                 activationState = new EntityStates.SerializableEntityStateType(typeof(PunchDash)),
+                activationStateMachineName = "Weapon",
+                interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
+
+                baseRechargeInterval = 4f,
+                baseMaxStock = 1,
+
+                rechargeStock = 1,
+                requiredStock = 1,
+                stockToConsume = 1,
+
+                resetCooldownTimerOnUse = false,
+                fullRestockOnAssign = true,
+                dontAllowPastMaxStocks = false,
+                mustKeyPress = true,
+                beginSkillCooldownOnSkillEnd = false,
+
+                isCombatSkill = true,
+                canceledFromSprinting = false,
+                cancelSprintingOnActivation = false,
+                forceSprintDuringState = false,
+
+            });
+
+            Skills.AddSecondarySkills(bodyPrefab, secondarySkillDef1);
+
+            //star finga
+
+            SkillDef secondarySkillDef2 = Skills.CreateSkillDef(new SkillDefInfo
+            {
+                skillName = "JotaroStarFinger",
+                skillNameToken = HENRY_PREFIX + "SECONDARY_FINGER_NAME",
+                skillDescriptionToken = HENRY_PREFIX + "SECONDARY_FINGER_DESCRIPTION",
+                keywordTokens = new string[] { "KEYWORD_STUNNING" },
+                skillIcon = assetBundle.LoadAsset<Sprite>("texSecondaryIcon2"),
+
+                activationState = new EntityStates.SerializableEntityStateType(typeof(StarFinger)),
                 activationStateMachineName = "Weapon",
                 interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
 
@@ -296,7 +335,7 @@ namespace HenryMod.Survivors.Henry
 
                 activationState = new EntityStates.SerializableEntityStateType(typeof(BaseDash)),
                 activationStateMachineName = "Weapon",
-                interruptPriority = EntityStates.InterruptPriority.Skill,
+                interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
 
                 baseRechargeInterval = 6f,
                 baseMaxStock = 1,
@@ -340,7 +379,7 @@ namespace HenryMod.Survivors.Henry
                 interruptPriority = EntityStates.InterruptPriority.Skill,
 
                 baseMaxStock = 1,
-                baseRechargeInterval = 15f,
+                baseRechargeInterval = 10f,
 
                 isCombatSkill = false,
                 mustKeyPress = true,
@@ -441,18 +480,19 @@ namespace HenryMod.Survivors.Henry
 
         private void AddHooks()
         {
-            R2API.RecalculateStatsAPI.GetStatCoefficients += RecalculateStatsAPI_GetStatCoefficients;
+            //R2API.RecalculateStatsAPI.GetStatCoefficients += RecalculateStatsAPI_GetStatCoefficients;
+
             StopTime.TimeStopHooks();
-            //[Info: R2API] com.weliveinasociety.CustomEmotesAPI; 2.11.0
-            //if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.rune580.riskofoptions"))
-            //{
 
-            //}
+            Emotes();
+        }
 
+        void Emotes()
+        {
             On.RoR2.SurvivorCatalog.Init += (orig) =>
             {
                 orig();
-                EmotesAPI.CustomEmotesAPI.ImportArmature(bodyPrefab, HenryAssets.emotePrefab);             
+                EmotesAPI.CustomEmotesAPI.ImportArmature(bodyPrefab, HenryAssets.emotePrefab);
             };
         }
 

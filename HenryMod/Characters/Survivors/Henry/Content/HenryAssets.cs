@@ -30,10 +30,14 @@ namespace HenryMod.Survivors.Henry
 
         public static GameObject oraOraEffect;
         public static GameObject ZaWarudoEffect;
+
+
+        public static GameObject emotePrefab;
+        //public static AnimationClip yareEmote;
         //public static GameObject loaderSwing;
         //public static GameObject loaderHit;
 
-        public static GameObject emotePrefab;
+
         public static void Init(AssetBundle assetBundle)
         {
              
@@ -62,7 +66,9 @@ namespace HenryMod.Survivors.Henry
 
             impactEffect = _assetBundle.LoadEffect("ImpactEffect", true);
 
-            emotePrefab = _assetBundle.LoadAsset<GameObject>("animJotaro"); // Load your body emote 
+            emotePrefab = _assetBundle.LoadAsset<GameObject>("animJotaro"); 
+
+            //yareEmote = _assetBundle.LoadAsset<AnimationClip>("IdleMenu");
 
             //var loaderSwingPref = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/LoaderSwingBasic.prefab").WaitForCompletion();
 
@@ -71,7 +77,7 @@ namespace HenryMod.Survivors.Henry
             //loaderHit = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Loader/OmniImpactVFXLoader.prefab").WaitForCompletion();
 
 
-            
+
 
         }
 

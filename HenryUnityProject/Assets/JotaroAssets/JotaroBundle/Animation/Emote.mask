@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Emote
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: ArmatureJotaro
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/heelIK.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/heelIK.r
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/kneeIK.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/kneeIK.r
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/handIK.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/handIK.r
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/jacket.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/jacket.l/Jacket_Front_Left_B
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/jacket.l/Jacket_Front_Left_B/Jacket_Front_Left_C
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/jacket.l/Jacket_Front_Left_B/Jacket_Front_Left_C/Jacket_Front_Left_D
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/jacket.r
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/jacket.r/Jacket_Front_Right_B
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/jacket.r/Jacket_Front_Right_B/Jacket_Front_Right_C
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/jacket.r/Jacket_Front_Right_B/Jacket_Front_Right_C/Jacket_Front_Right_D
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/Jacket_Back_Left_A
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/Jacket_Back_Left_A/Jacket_Back_Left_B
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/Jacket_Back_Left_A/Jacket_Back_Left_B/Jacket_Back_Left_C
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/Jacket_Back_Right_A
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/Jacket_Back_Right_A/Jacket_Back_Right_B
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/Jacket_Back_Right_A/Jacket_Back_Right_B/Jacket_Back_Right_C
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/Pocket_Left
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/Pocket_Right
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.l/lower_leg.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.l/lower_leg.l/foot.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.l/lower_leg.l/foot.l/toe.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.r
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.r/lower_leg.r
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.r/lower_leg.r/foot.r
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/pelvis/upper_leg.r/lower_leg.r/foot.r/toe.r
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/chainIK
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/chainIKmid
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/Collar_Back
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/Collar_Left_A
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/Collar_Left_A/Keychain_A
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/Collar_Left_A/Keychain_A/Keychain_B
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/Collar_Left_A/Keychain_A/Keychain_B/Keychain_C
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/Collar_Left_A/Keychain_A/Keychain_B/Keychain_C/Keychain_D
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/Collar_Left_B
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/Collar_Right_A
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/Collar_Right_B
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/Arm_Left_Shoulder_Adj_A
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/Arm_Left_Sleeve
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger0
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger0/ValveBiped.Bip01_L_Finger01
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger0/ValveBiped.Bip01_L_Finger01/ValveBiped.Bip01_L_Finger02
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger1
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger1/ValveBiped.Bip01_L_Finger11
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger1/ValveBiped.Bip01_L_Finger11/ValveBiped.Bip01_L_Finger12
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger2
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger2/ValveBiped.Bip01_L_Finger21
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger2/ValveBiped.Bip01_L_Finger21/ValveBiped.Bip01_L_Finger22
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger3
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger3/ValveBiped.Bip01_L_Finger31
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger3/ValveBiped.Bip01_L_Finger31/ValveBiped.Bip01_L_Finger32
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger4
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger4/ValveBiped.Bip01_L_Finger41
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_L_Clavicle/upper_arm.l/lower_arm.l/hand.l/ValveBiped.Bip01_L_Finger4/ValveBiped.Bip01_L_Finger41/ValveBiped.Bip01_L_Finger42
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_Neck
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_Neck/ValveBiped.Bip01_Head
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_Neck/ValveBiped.Bip01_Head/ValveBiped.Bip01_Head.001
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/Arm_Right_Shoulder_Adj_A
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/Arm_Right_Sleeve
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger0
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger0/ValveBiped.Bip01_R_Finger01
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger0/ValveBiped.Bip01_R_Finger01/ValveBiped.Bip01_R_Finger02
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger1
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger1/ValveBiped.Bip01_R_Finger11
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger1/ValveBiped.Bip01_R_Finger11/ValveBiped.Bip01_R_Finger12
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger2
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger2/ValveBiped.Bip01_R_Finger21
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger2/ValveBiped.Bip01_R_Finger21/ValveBiped.Bip01_R_Finger22
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger3
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger3/ValveBiped.Bip01_R_Finger31
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger3/ValveBiped.Bip01_R_Finger31/ValveBiped.Bip01_R_Finger32
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger4
+    m_Weight: 1
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger4/ValveBiped.Bip01_R_Finger41
+    m_Weight: 0
+  - m_Path: ArmatureJotaro/ROOT/base/stomach/ValveBiped.Bip01_Spine2/ValveBiped.Bip01_R_Clavicle/upper_arm.r/lower_arm.r/hand.r/ValveBiped.Bip01_R_Finger4/ValveBiped.Bip01_R_Finger41/ValveBiped.Bip01_R_Finger42
+    m_Weight: 0
+  - m_Path: Body
+    m_Weight: 0
+  - m_Path: Eyes
+    m_Weight: 0

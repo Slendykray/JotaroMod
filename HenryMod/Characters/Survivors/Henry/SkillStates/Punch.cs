@@ -58,7 +58,10 @@ namespace HenryMod.Survivors.Henry.SkillStates
             //playbackRateParam = "Slash.playbackRate";
 
             base.OnEnter();
-             
+
+            GetComponent<StarPlatinum>().AddTime(duration);
+
+
             Util.PlaySound("OraMega", gameObject);
 
             this.overlapAttack = base.InitMeleeOverlap(HenryStaticValues.punchDamageCoefficient, HenryAssets.impactEffect, base.GetModelTransform(), "PunchGroup");
@@ -66,10 +69,8 @@ namespace HenryMod.Survivors.Henry.SkillStates
             this.overlapAttack.damageType.damageSource = DamageSource.Secondary;
             this.overlapAttack.damageType.damageType = DamageType.Stun1s;
        
-
-            GetComponent<StarPlatinum>().AddTime(duration);
-
-            Vector3 aim = GetComponent<AimBuffer>().direction;
+            
+            Vector3 aim = GetAimRay().direction;
             characterDirection.forward = aim;
 
             List<HurtBox> hitResults = new List<HurtBox>();
@@ -97,11 +98,11 @@ namespace HenryMod.Survivors.Henry.SkillStates
                             motor.velocity = force;
                         }
 
-                        Rigidbody rb = healthComponent.body.rigidbody;
-                        if (rb)
-                        {
-                            rb.velocity = force;
-                        }
+                        //Rigidbody rb = healthComponent.body.rigidbody;
+                        //if (rb)
+                        //{
+                        //    rb.velocity = force;
+                        //}
 
                     }
                 }
@@ -114,16 +115,16 @@ namespace HenryMod.Survivors.Henry.SkillStates
         public override void FixedUpdate()
         {
             base.FixedUpdate();
-
-            //if (this.stopwatch >= duration && base.isAuthority)
-            //{
-            //    this.outer.SetNextStateToMain();
-            //}
         }
 
         public override void OnExit()
         {
             base.OnExit();
+        }
+
+        public override InterruptPriority GetMinimumInterruptPriority()
+        {
+            return InterruptPriority.PrioritySkill;
         }
     }
 }

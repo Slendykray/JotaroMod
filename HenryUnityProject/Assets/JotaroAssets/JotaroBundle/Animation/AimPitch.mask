@@ -1,0 +1,562 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AimPitch
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: 3stp01t0 body
+    m_Weight: 0
+  - m_Path: 3stp01t0 body.001
+    m_Weight: 0
+  - m_Path: 3stp01t0 body.002
+    m_Weight: 0
+  - m_Path: 3stp01t0 eye_l
+    m_Weight: 0
+  - m_Path: 3stp01t0 eye_l Layer 2
+    m_Weight: 0
+  - m_Path: 3stp01t0 eye_r
+    m_Weight: 0
+  - m_Path: 3stp01t0 eye_r Layer 2
+    m_Weight: 0
+  - m_Path: 3stp01t0 face
+    m_Weight: 0
+  - m_Path: 3stp01t0 face.001
+    m_Weight: 0
+  - m_Path: Armature
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 bl cloth01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 bl cloth01/3stp01t0
+      bl cloth02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 body
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 br cloth01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 br cloth01/3stp01t0
+      br cloth02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 fl cloth01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 fl cloth01/3stp01t0
+      fl cloth02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 fr cloth01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 fr cloth01/3stp01t0
+      fr cloth02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l clavicle bone.L
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l clavicle bone.R
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l shoulder.L
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l shoulder.R
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      arm bone01.L
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      arm bone02.L
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l arm bone04.L
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l arm bone05.L
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l arm bone06.L
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l elbow.L
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/3stp01t0 l wep d
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger0.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger0.l/finger01.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger0.l/finger01.l/3stp01t0 l finger02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger1.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger1.l/finger11.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger1.l/finger11.l/finger12.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger2.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger2.l/finger21.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger2.l/finger21.l/finger22.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger3.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger3.l/finger31.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger3.l/finger31.l/finger32.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger4.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger4.l/finger41.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.L/3stp01t0 l
+      forearm.L/3stp01t0 l hand.L/finger4.l/finger41.l/finger42.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      arm bone01.R
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      arm bone02.R
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l arm bone04.R
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l arm bone05.R
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l arm bone06.R
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l elbow.R
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/3stp01t0 r wep d
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger0.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger0.r/finger01.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger0.r/finger01.r/3stp01t0 r finger02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger1.r
+    m_Weight: 1
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger1.r/finger11.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger1.r/finger11.r/finger12.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger2.r
+    m_Weight: 1
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger2.r/finger21.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger2.r/finger21.r/finger22.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger3.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger3.r/finger31.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger3.r/finger31.r/finger32.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger4.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger4.r/finger41.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 l
+      forearm.R/3stp01t0 l hand.R/finger4.r/finger41.r/finger42.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 l clavicle/3stp01t0 l upperarm.R/3stp01t0 r
+      arm bone01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      c nose
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      eye_l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      eye_r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      eyebone01_l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      eyebone01_l/3stp01t0 eyebone02_l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      eyebone01_r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      eyebone01_r/3stp01t0 eyebone02_r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l eye 01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l eye 02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l eye 03
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l eye 04
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l eye 05
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l eye 06
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l eye 07
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l eye 08
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l mayu 01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l mayu 02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l mayu 03
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l mayu 04
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      l mayu 05
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r eye 01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r eye 02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r eye 03
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r eye 04
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r eye 05
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r eye 06
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r eye 07
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r eye 08
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r mayu 01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r mayu 02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r mayu 03
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r mayu 04
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face01/3stp01t0
+      r mayu 05
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      c lip 00
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      c lip 10
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      jaw
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      l lip 01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      l lip 02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      l lip 03
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      l lip 04
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      l lip 05
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      l lip 06
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      l lip 07
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      lower teeth
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      r lip 01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      r lip 02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      r lip 03
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      r lip 04
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      r lip 05
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      r lip 06
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      r lip 07
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      tongue
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      tongue01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 face02/3stp01t0
+      upper teeth
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 hair01
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 hair02
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 hair03
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 hair04
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 hair05
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 neck/3stp01t0 head/3stp01t0 hair07
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/3stp01t0 spine/3stp01t0
+      spine1/3stp01t0 spine2/3stp01t0 r clavicle
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/thigh.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/thigh.l/calf.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/thigh.l/calf.l/3stp01t0
+      l foot
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/thigh.l/calf.l/3stp01t0
+      l foot/3stp01t0 l toe0
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/thigh.l/calf.l/knee.l
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/thigh.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/thigh.r/calf.r
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/thigh.r/calf.r/3stp01t0
+      r foot
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/thigh.r/calf.r/3stp01t0
+      r foot/3stp01t0 r toe0
+    m_Weight: 0
+  - m_Path: Armature/3stp01t0 trall/3stp01t0/3stp01t0 pelvis/thigh.r/calf.r/knee.r
+    m_Weight: 0

@@ -38,13 +38,13 @@ namespace HenryMod.Survivors.Henry.SkillStates
             swingEffectPrefab = HenryAssets.swingEffect;
             hitEffectPrefab = HenryAssets.impactEffect;
 
-            muzzleString = swingIndex % 2 == 0 ? "SwingLeft" : "SwingRight";
+            //muzzleString = swingIndex % 2 == 0 ? "SwingLeft" : "SwingRight";
+            muzzleString = GetComponent<StarPlatinum>().swingIndex > 1 ? "SwingLeft" : "SwingRight";
             playbackRateParam = "Slash.playbackRate";
-
-           
-
+        
             base.OnEnter();
-            GetComponent<StarPlatinum>().AddTime(duration);
+
+            GetComponent<StarPlatinum>().AddTime(duration * earlyExitPercentTime, duration * 0.25f);
         }
 
         protected override void PlayAttackAnimation()

@@ -25,6 +25,8 @@ namespace HenryMod.Survivors.Henry
             Modules.Content.AddEntityState(typeof(StopTime));
 
             Modules.Content.AddEntityState(typeof(TimeStopFreezeState));
+
+            Modules.Content.AddEntityState(typeof(StarFinger));
         }
     }
 }

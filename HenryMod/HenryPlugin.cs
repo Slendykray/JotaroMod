@@ -20,12 +20,12 @@ namespace HenryMod
         // if you do not change this, you are giving permission to deprecate the mod-
         //  please change the names to your own stuff, thanks
         //   this shouldn't even have to be said
-        public const string MODUID = "com.rob.HenryMod";
-        public const string MODNAME = "HenryMod";
+        public const string MODUID = "com.slendykray.JotaroMod";
+        public const string MODNAME = "JotaroMod";
         public const string MODVERSION = "1.0.0";
 
         // a prefix for name tokens to prevent conflicts- please capitalize all name tokens for convention
-        public const string DEVELOPER_PREFIX = "ROB";
+        public const string DEVELOPER_PREFIX = "SLEND";
 
         public static HenryPlugin instance;
 
@@ -45,19 +45,6 @@ namespace HenryMod
             // make a content pack and add it. this has to be last
             new Modules.ContentPacks().Initialize();
 
-
-            //On.EntityStates.BasicMeleeAttack.OnEnter += (orig, self) =>
-            //{
-            //    orig(self);
-
-            //    Log.Info(self.swingEffectPrefab.name);              
-            //};
-
-            //On.RoR2.Util.PlaySound_string_GameObject += (orig, soundString, gameObject) =>
-            //{
-            //    Log.Info($"PlaySound: {soundString}");
-            //    return orig(soundString, gameObject);
-            //};
         }
     }
 }

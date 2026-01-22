@@ -26,7 +26,7 @@ namespace HenryMod.Survivors.Henry
             // + "< ! > Use ZA WARUDO and ORA to get yourself a good opening." + Environment.NewLine + Environment.NewLine
             // + "< ! > You can cancel out of Ora-Ora with ORA." + Environment.NewLine + Environment.NewLine           
             // + "< ! > lol." + Environment.NewLine + Environment.NewLine;
-            string desc = "..yare yare daze.";
+            string desc = "yare yare daze..";
 
             string outro = "..yare yare daze.";
             string outroFailure = "..yare yare daze.";
@@ -56,12 +56,12 @@ namespace HenryMod.Survivors.Henry
             Language.Add(prefix + "PRIMARY_PUNCH_DESCRIPTION", Tokens.agilePrefix + $" Swing for <style=cIsDamage>{100f * HenryStaticValues.swordDamageCoefficient}% damage</style>.");
             #endregion
 
-            #region Secondary
-            Language.Add(prefix + "SECONDARY_GUN_NAME", "Handgun");
-            Language.Add(prefix + "SECONDARY_GUN_DESCRIPTION", Tokens.agilePrefix + $"Fire a handgun for <style=cIsDamage>{100f * HenryStaticValues.gunDamageCoefficient}% damage</style>.");
-
+            #region Secondary         
             Language.Add(prefix + "SECONDARY_PUNCH_NAME", "ORA!");
-            Language.Add(prefix + "SECONDARY_PUNCH_DESCRIPTION", $"<style=cIsUtility>Dash</style>. <style=cIsDamage>Stunning</style>. Launch enemies for <style=cIsDamage>{100f * HenryStaticValues.punchDamageCoefficient}% damage</style>.");
+            Language.Add(prefix + "SECONDARY_PUNCH_DESCRIPTION", $"<style=cIsUtility>Dash</style>. <style=cIsDamage>Stunning</style>. " + $"Push enemies for <style=cIsDamage>{100f * HenryStaticValues.punchDamageCoefficient}% damage</style>.");
+
+            Language.Add(prefix + "SECONDARY_FINGER_NAME", "Star Finga!");
+            Language.Add(prefix + "SECONDARY_FINGER_DESCRIPTION", $"<style=cIsDamage>Stunning</style>. " + $"Finger enemies for <style=cIsDamage>{100f * HenryStaticValues.fingerDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Utility

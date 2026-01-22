@@ -21,6 +21,8 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
         private float damageFrequency = 10f;
 
+        private float proc = 0.6f;
+
         public static float duration = 4f;
 
         private float minDuration = 0.5f;
@@ -39,7 +41,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
             this.overlapAttack.damageType.damageSource = DamageSource.Utility;
 
-            overlapAttack.procCoefficient = 0.8f;
+            overlapAttack.procCoefficient = proc;
 
             oraFX = GameObject.Instantiate(HenryAssets.oraOraEffect, FindModelChild("SwingCenter"));
 
@@ -53,7 +55,9 @@ namespace HenryMod.Survivors.Henry.SkillStates
 
             characterMotor.velocity = Vector3.zero;
 
-            characterDirection.forward = GetComponent<AimBuffer>().direction;
+            characterMotor.velocity.y = 0.5f;
+
+            characterDirection.forward = GetComponent<StarPlatinum>().aimBuffer;
 
             float deltaTime = base.GetDeltaTime();
             this.stopwatch += deltaTime;
@@ -63,7 +67,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
             {
                 this.attackStopwatch -= num;
 
-                GetComponent<StarPlatinum>().AddTime(num);
+                GetComponent<StarPlatinum>().AddTime(num);            
 
                 if (isAuthority)
                 {

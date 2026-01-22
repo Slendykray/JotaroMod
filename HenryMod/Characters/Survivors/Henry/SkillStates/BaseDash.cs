@@ -30,7 +30,7 @@ namespace HenryMod.Survivors.Henry.SkillStates
             PlayAnimation("FullBody, Override", "Dash", "Dash.playbackRate", duration * 2);
 
             dashVector = inputBank.aimDirection;
-            GetComponent<AimBuffer>().direction = dashVector;
+            GetComponent<StarPlatinum>().aimBuffer = dashVector;
 
             nextState = new RapidPunch();
         }
