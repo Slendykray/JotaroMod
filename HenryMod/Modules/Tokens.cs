@@ -1,4 +1,4 @@
-﻿namespace HenryMod.Modules
+﻿namespace JotaroMod.Modules
 {
     internal static class Tokens
     {

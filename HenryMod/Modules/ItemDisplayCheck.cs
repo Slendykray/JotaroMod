@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace HenryMod.Modules
+namespace JotaroMod.Modules
 {
     internal static class ItemDisplayCheck
     {
