@@ -4,7 +4,7 @@ using JotaroMod.Modules;
 
 namespace JotaroMod.Survivors.Jotaro.Components
 {
-    internal class StarPlatinum: MonoBehaviour
+    public class StarPlatinum: MonoBehaviour
     {             
         private float stopwatch;
 
