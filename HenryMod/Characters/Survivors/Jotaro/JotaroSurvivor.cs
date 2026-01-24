@@ -261,7 +261,7 @@ namespace JotaroMod.Survivors.Jotaro
                 activationStateMachineName = "Weapon",
                 interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
 
-                baseRechargeInterval = 4f,
+                baseRechargeInterval = 5f,
                 baseMaxStock = 1,
 
                 rechargeStock = 1,
@@ -297,7 +297,7 @@ namespace JotaroMod.Survivors.Jotaro
                 activationStateMachineName = "Weapon",
                 interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
 
-                baseRechargeInterval = 4f,
+                baseRechargeInterval = 5f,
                 baseMaxStock = 1,
 
                 rechargeStock = 1,
@@ -385,6 +385,8 @@ namespace JotaroMod.Survivors.Jotaro
                 mustKeyPress = true,
 
                 cancelSprintingOnActivation = false,
+
+                beginSkillCooldownOnSkillEnd = true,
             });
 
             Skills.AddSpecialSkills(bodyPrefab, specialSkillDef2);
@@ -489,6 +491,9 @@ namespace JotaroMod.Survivors.Jotaro
 
         void Emotes()
         {
+            if (!BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.weliveinasociety.CustomEmotesAPI"))
+                return;
+
             On.RoR2.SurvivorCatalog.Init += (orig) =>
             {
                 orig();

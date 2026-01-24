@@ -12,7 +12,7 @@ namespace JotaroMod.Survivors.Jotaro
 
         public const float punchDamageCoefficient = 7f;
 
-        public const float rapidPunchDamageCoefficient = 1.1f;
+        public const float rapidPunchDamageCoefficient = 1.6f;
 
         public const float fingerDamageCoefficient = 12f;
 

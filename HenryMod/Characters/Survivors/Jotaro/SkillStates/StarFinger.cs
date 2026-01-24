@@ -96,7 +96,7 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
                         smartCollision = true,
                         procChainMask = default,
                         procCoefficient = procCoefficient,
-                        radius = 5f,
+                        radius = 2f,
                         sniper = false,
                         stopperMask = LayerIndex.CommonMasks.bullet,
                         weapon = null,

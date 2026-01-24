@@ -23,7 +23,7 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
 
         private float proc = 0.6f;
 
-        public static float duration = 4f;
+        public static float duration = 2.5f;
 
         private float minDuration = 0.5f;
 

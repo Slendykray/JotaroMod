@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using BepInEx.Configuration;
 using JotaroMod.Survivors.Jotaro;
 using R2API.Utils;
 using RoR2;
@@ -12,7 +13,8 @@ using System.Security.Permissions;
 //rename this namespace
 namespace JotaroMod
 {
-    //[BepInDependency("com.rune580.riskofoptions", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("com.weliveinasociety.CustomEmotesAPI", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("com.rune580.riskofoptions", BepInDependency.DependencyFlags.SoftDependency)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
     [BepInPlugin(MODUID, MODNAME, MODVERSION)]
     public class JotaroPlugin : BaseUnityPlugin
@@ -28,6 +30,7 @@ namespace JotaroMod
         public const string DEVELOPER_PREFIX = "SLEND";
 
         public static JotaroPlugin instance;
+
 
         void Awake()
         {
