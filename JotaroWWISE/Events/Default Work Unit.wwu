@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{887C669A-D08B-44AD-B3AA-14B406616316}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{887C669A-D08B-44AD-B3AA-14B406616316}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_OraOra" ID="{EBCAADBC-D8F9-468A-B0F7-E277F37255E8}">
+					<ChildrenList>
+						<Action Name="" ID="{CD0747C1-88A3-449B-87D9-E5C5F5A1011A}" ShortID="862203385">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OraOra" ID="{A58AC791-A023-4D33-8382-93D1644BD416}" WorkUnitID="{0CE3CCE4-2565-496E-AB1B-FED0DE377E1C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_OraOra" ID="{4B4FF0D0-5D44-4F72-8C76-7567E702E2D2}">
+					<ChildrenList>
+						<Action Name="" ID="{E6E9C2BF-3953-4460-8820-D816B9C960A2}" ShortID="1071920722">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OraOra" ID="{A58AC791-A023-4D33-8382-93D1644BD416}" WorkUnitID="{0CE3CCE4-2565-496E-AB1B-FED0DE377E1C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ZaWarudo" ID="{B17EFB43-EB0A-4D28-A98E-7B903B1F21CC}">
+					<ChildrenList>
+						<Action Name="" ID="{1886540C-5F48-4653-AD52-C0AA22ED6D6D}" ShortID="694992958">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZaWarudo" ID="{59C41EB9-9B3B-472C-95C8-C666D18FA8C0}" WorkUnitID="{0CE3CCE4-2565-496E-AB1B-FED0DE377E1C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ZaWarudoEnd" ID="{972A04BD-93EA-4265-9B73-11BD5DACCB9F}">
+					<ChildrenList>
+						<Action Name="" ID="{443D69A1-412E-456C-885F-1537FA9D66B6}" ShortID="74199819">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZaWarudoEnd" ID="{73FF188F-41E6-4FA4-87DA-79638B3030F6}" WorkUnitID="{0CE3CCE4-2565-496E-AB1B-FED0DE377E1C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ZaWarudoStart" ID="{B5D51F3C-2348-4FE8-A085-BCA01DBDB5A3}">
+					<ChildrenList>
+						<Action Name="" ID="{57294AF4-AAB7-4EB0-993E-093E22963699}" ShortID="483376598">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ZaWarudoStart" ID="{46CD2BE4-70F5-4CEB-AF7A-238431A5881E}" WorkUnitID="{0CE3CCE4-2565-496E-AB1B-FED0DE377E1C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="OraMega" ID="{7ABD8B11-D1D7-4534-B2C7-F98FCF140A65}">
+					<ChildrenList>
+						<Action Name="" ID="{E25E8253-DDDE-48A1-9A68-30304623E2E2}" ShortID="1012096704">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OraMega" ID="{D54A9D6E-3B80-46A4-9D9A-C5030F91A369}" WorkUnitID="{0CE3CCE4-2565-496E-AB1B-FED0DE377E1C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ora" ID="{F1B385C9-2FCC-4898-866D-4C572D0C8359}">
+					<ChildrenList>
+						<Action Name="" ID="{3B64998A-2C9A-4840-96D3-7167D9CC03DE}" ShortID="118922749">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ora" ID="{E3CAFA01-2E57-4AFA-BE45-3540CE060380}" WorkUnitID="{0CE3CCE4-2565-496E-AB1B-FED0DE377E1C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu_Random" ID="{E2F7877C-0237-42A8-9522-92B8679996EB}">
+					<ChildrenList>
+						<Action Name="" ID="{9D45D8BE-B053-46CD-9979-F25B574D076F}" ShortID="58261143">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Random" ID="{54FE8D38-8A58-4294-B01B-7C66D14FC99A}" WorkUnitID="{0CE3CCE4-2565-496E-AB1B-FED0DE377E1C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StarFinger" ID="{642902DC-AE3D-43A3-B11C-A0C51E160CB7}">
+					<ChildrenList>
+						<Action Name="" ID="{1BF0CB3B-12AC-48C6-AA9E-E96CC49143D9}" ShortID="25891644">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="StarFinga2" ID="{D161A9EB-25A7-46A6-A751-AE4EB667458A}" WorkUnitID="{0CE3CCE4-2565-496E-AB1B-FED0DE377E1C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="YareYareDaze" ID="{4A25DEDC-069A-4754-8D29-85B286A4A620}">
+					<ChildrenList>
+						<Action Name="" ID="{26C3822C-84F0-422F-87FF-86BDE87CC44F}" ShortID="239749057">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="YareYareDaze" ID="{6CD1A2EB-B154-4238-8277-04E253D579E9}" WorkUnitID="{0CE3CCE4-2565-496E-AB1B-FED0DE377E1C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Jojo" GUID="{B6FEAFB7-35A9-48BF-A07E-FDD6E7B4815B}" Generator="2023.1.4.8496"/>
+	<CacheRoot>../.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Windows" GUID="{CFF3DEBD-570C-4696-AF4C-BDD513037A38}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{629A2053-6935-4618-BCA4-3A9BD23E0B96}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{AB069310-DB4B-166C-5737-09E43EC17D30}</FileHash>
+</ProjectInfo>
