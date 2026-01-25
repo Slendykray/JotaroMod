@@ -1,5 +1,5 @@
 # JotaroMod
-Finally, a JoJo charcter in Ror2.
+Finally, a JoJo character in Ror2.
 
 Multiplayer and CustomEmotesAPI support.
 
