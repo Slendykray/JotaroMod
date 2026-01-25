@@ -1,8 +1,8 @@
 {
     "name": "JotaroMod",
     "author": "Slendykray",
-    "version_number": "1.1.0",
-    "website_url": "",
+    "version_number": "1.1.1",
+    "website_url": "https://github.com/Slendykray/JotaroMod",
     "description": "Adds Jotaro Kujo from JJBA",
     "dependencies": [
         "bbepis-BepInExPack-5.4.1905",
