@@ -37,7 +37,7 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
         {           
             base.OnEnter();
 
-            this.overlapAttack = base.InitMeleeOverlap(JotaroStaticValues.rapidPunchDamageCoefficient, JotaroAssets.impactEffect, base.GetModelTransform(), "PunchGroup");
+            this.overlapAttack = base.InitMeleeOverlap(JotaroConfig.utilityDamageCoefficient.Value, JotaroAssets.impactEffect, base.GetModelTransform(), "PunchGroup");
 
             this.overlapAttack.damageType.damageSource = DamageSource.Utility;
 
@@ -45,7 +45,8 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
 
             oraFX = GameObject.Instantiate(JotaroAssets.oraOraEffect, FindModelChild("SwingCenter"));
 
-            Util.PlaySound("Play_OraOra", gameObject);
+            if (JotaroConfig.voiceLines.Value)
+                Util.PlaySound("Play_OraOra", gameObject);
           
         }
 

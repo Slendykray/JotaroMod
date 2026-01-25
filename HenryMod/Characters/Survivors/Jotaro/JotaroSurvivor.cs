@@ -40,18 +40,22 @@ namespace JotaroMod.Survivors.Jotaro
             characterPortrait = assetBundle.LoadAsset<Texture>("texJotaroIcon"),
             bodyColor = new Color32(206, 80, 255, 255),
             sortPosition = 100,
-
-            
-
+     
             crosshair = Asset.LoadCrosshair("SimpleDot"),
             podPrefab = LegacyResourcesAPI.Load<GameObject>("Prefabs/NetworkedObjects/SurvivorPod"),
 
-            maxHealth = 160f,
-            healthRegen = 1.5f,
-            armor = 20f,
-            moveSpeed = 7f,
 
-            jumpCount = 1,
+            maxHealth = JotaroConfig.baseHealth.Value,
+            //healthGrowth = JotaroConfig.baseHealth.Value,
+            healthRegen = JotaroConfig.baseRegen.Value,
+            //regenGrowth = JotaroConfig.regenGrowth.Value,
+            armor = JotaroConfig.baseArmor.Value,
+            //armorGrowth = JotaroConfig.armorGrowth.Value,        
+            damage = JotaroConfig.baseDamage.Value,
+            //damageGrowth = JotaroConfig.damageGrowth.Value,
+            //crit = JotaroConfig.baseCrit.Value,                       
+            moveSpeed = JotaroConfig.baseMovementSpeed.Value,
+            jumpCount = JotaroConfig.jumpCount.Value,
         };
 
         public override CustomRendererInfo[] customRendererInfos => new CustomRendererInfo[]
@@ -98,7 +102,7 @@ namespace JotaroMod.Survivors.Jotaro
 
             base.InitializeCharacter();
 
-            JotaroConfig.Init();
+            //JotaroConfig.Init();
             JotaroStates.Init();
             JotaroTokens.Init();
 
@@ -261,7 +265,7 @@ namespace JotaroMod.Survivors.Jotaro
                 activationStateMachineName = "Weapon",
                 interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
 
-                baseRechargeInterval = 5f,
+                baseRechargeInterval = JotaroConfig.secondaryCD.Value,
                 baseMaxStock = 1,
 
                 rechargeStock = 1,
@@ -297,7 +301,7 @@ namespace JotaroMod.Survivors.Jotaro
                 activationStateMachineName = "Weapon",
                 interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
 
-                baseRechargeInterval = 5f,
+                baseRechargeInterval = JotaroConfig.secondaryAltCD.Value,
                 baseMaxStock = 1,
 
                 rechargeStock = 1,
@@ -337,7 +341,7 @@ namespace JotaroMod.Survivors.Jotaro
                 activationStateMachineName = "Weapon",
                 interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
 
-                baseRechargeInterval = 6f,
+                baseRechargeInterval = JotaroConfig.utilityCD.Value,
                 baseMaxStock = 1,
 
                 rechargeStock = 1,
@@ -379,7 +383,7 @@ namespace JotaroMod.Survivors.Jotaro
                 interruptPriority = EntityStates.InterruptPriority.Skill,
 
                 baseMaxStock = 1,
-                baseRechargeInterval = 10f,
+                baseRechargeInterval = JotaroConfig.specialCD.Value,
 
                 isCombatSkill = false,
                 mustKeyPress = true,

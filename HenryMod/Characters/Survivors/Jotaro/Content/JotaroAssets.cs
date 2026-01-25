@@ -33,9 +33,6 @@ namespace JotaroMod.Survivors.Jotaro
 
 
         public static GameObject emotePrefab;
-        //public static AnimationClip yareEmote;
-        //public static GameObject loaderSwing;
-        //public static GameObject loaderHit;
 
 
         public static void Init(AssetBundle assetBundle)
@@ -43,8 +40,10 @@ namespace JotaroMod.Survivors.Jotaro
              
             _assetBundle = assetBundle;
 
+            //icon = _assetBundle.LoadAsset<Sprite>("texJotaroIcon");
+            //RiskOfOptions.ModSettingsManager.SetModIcon(JotaroAssets._assetBundle.LoadAsset<Sprite>("texJotaroIcon"));
             //swordHitSoundEvent = Content.CreateAndAddNetworkSoundEventDef("HenrySwordHit");
-    
+
             CreateEffects();
 
             CreateProjectiles();
@@ -67,6 +66,7 @@ namespace JotaroMod.Survivors.Jotaro
             impactEffect = _assetBundle.LoadEffect("ImpactEffect", true);
 
             emotePrefab = _assetBundle.LoadAsset<GameObject>("animJotaro"); 
+
 
             //yareEmote = _assetBundle.LoadAsset<AnimationClip>("IdleMenu");
 

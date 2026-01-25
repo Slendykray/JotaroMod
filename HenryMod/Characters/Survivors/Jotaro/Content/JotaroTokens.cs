@@ -49,35 +49,26 @@ namespace JotaroMod.Survivors.Jotaro
             #endregion
 
             #region Primary
-            Language.Add(prefix + "PRIMARY_SLASH_NAME", "Sword");
-            Language.Add(prefix + "PRIMARY_SLASH_DESCRIPTION", Tokens.agilePrefix + $"Swing forward for <style=cIsDamage>{100f * JotaroStaticValues.swordDamageCoefficient}% damage</style>.");
-
             Language.Add(prefix + "PRIMARY_PUNCH_NAME", "Ora");
-            Language.Add(prefix + "PRIMARY_PUNCH_DESCRIPTION", Tokens.agilePrefix + $" Swing for <style=cIsDamage>{100f * JotaroStaticValues.swordDamageCoefficient}% damage</style>.");
+            Language.Add(prefix + "PRIMARY_PUNCH_DESCRIPTION", Tokens.agilePrefix + $" Swing for <style=cIsDamage>{100f * JotaroConfig.primaryDamageCoefficient.Value}% damage</style>.");
             #endregion
 
             #region Secondary         
             Language.Add(prefix + "SECONDARY_PUNCH_NAME", "ORA!");
-            Language.Add(prefix + "SECONDARY_PUNCH_DESCRIPTION", $"<style=cIsUtility>Dash</style>. <style=cIsDamage>Stunning</style>. " + $"Push enemies for <style=cIsDamage>{100f * JotaroStaticValues.punchDamageCoefficient}% damage</style>.");
+            Language.Add(prefix + "SECONDARY_PUNCH_DESCRIPTION", $"<style=cIsUtility>Dash</style>. <style=cIsDamage>Stunning</style>. " + $"Push enemies for <style=cIsDamage>{100f * JotaroConfig.secondaryDamageCoefficient.Value}% damage</style>.");
 
             Language.Add(prefix + "SECONDARY_FINGER_NAME", "Star Finga!");
-            Language.Add(prefix + "SECONDARY_FINGER_DESCRIPTION", $"<style=cIsDamage>Stunning</style>. " + $"Finger enemies for <style=cIsDamage>{100f * JotaroStaticValues.fingerDamageCoefficient}% damage</style>.");
+            Language.Add(prefix + "SECONDARY_FINGER_DESCRIPTION", $"<style=cIsDamage>Stunning</style>. " + $"Finger enemies for <style=cIsDamage>{100f * JotaroConfig.secondaryAltDamageCoefficient.Value}% damage</style>.");
             #endregion
 
             #region Utility
-            Language.Add(prefix + "UTILITY_ROLL_NAME", "Roll");
-            Language.Add(prefix + "UTILITY_ROLL_DESCRIPTION", "Roll a short distance, gaining <style=cIsUtility>300 armor</style>. <style=cIsUtility>You cannot be hit during the roll.</style>");
-
             Language.Add(prefix + "UTILITY_PUNCH_NAME", "Ora-ora-ora-ora-ora!");
-            Language.Add(prefix + "UTILITY_PUNCH_DESCRIPTION", $"<style=cIsUtility>Dash</style>. Repeatedly punch for <style=cIsDamage>{100f * JotaroStaticValues.rapidPunchDamageCoefficient}% damage</style>.");
+            Language.Add(prefix + "UTILITY_PUNCH_DESCRIPTION", $"<style=cIsUtility>Dash</style>. Repeatedly punch for <style=cIsDamage>{100f * JotaroConfig.utilityDamageCoefficient.Value}% damage</style>.");
             #endregion
 
             #region Special
-            Language.Add(prefix + "SPECIAL_BOMB_NAME", "Bomb");
-            Language.Add(prefix + "SPECIAL_BOMB_DESCRIPTION", $"Throw a bomb for <style=cIsDamage>{100f * JotaroStaticValues.bombDamageCoefficient}% damage</style>.");
-
             Language.Add(prefix + "SPECIAL_ZAWARUDO_NAME", "ZA WARUDO");          
-            Language.Add(prefix + "SPECIAL_ZAWARUDO_DESCRIPTION", $"Stop <style=cIsHealth>FUCKING</style> <style=cIsUtility>TIME</style> for <style=cIsUtility>{StopTime.TIMESTOP_DURATION}s</style>.");
+            Language.Add(prefix + "SPECIAL_ZAWARUDO_DESCRIPTION", $"Stop <style=cIsHealth>FUCKING</style> <style=cIsUtility>TIME</style> for <style=cIsUtility>{JotaroConfig.timeStopDuration.Value}s</style>.");
             #endregion
 
             #region Achievements

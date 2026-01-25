@@ -1,6 +1,5 @@
 ﻿using RoR2;
 using UnityEngine;
-using JotaroMod.Modules;
 
 namespace JotaroMod.Survivors.Jotaro.Components
 {
@@ -137,14 +136,13 @@ namespace JotaroMod.Survivors.Jotaro.Components
 
         void Update()
         {
-            if (Config.GetKeyPressed(JotaroConfig.emoteButton.Value))
+            if (Input.GetKeyDown(JotaroConfig.emoteButton.Value))
             {
                 Animator pAnim = GetParentAnimator();
                 bool emote = pAnim.GetBool("Emote");
 
                 if (!emote)
                 {
-                    //Util.PlaySound("YareYareDaze", gameObject);
                     PlayMenuSound();
                     pAnim.SetBool("Emote", true);
                 }
@@ -158,7 +156,8 @@ namespace JotaroMod.Survivors.Jotaro.Components
 
         public void PlayMenuSound()
         {
-            Util.PlaySound("Play_Menu_Random", gameObject);
+            if (JotaroConfig.voiceLines.Value)
+                Util.PlaySound("Play_Menu_Random", gameObject);
         }
 
     }

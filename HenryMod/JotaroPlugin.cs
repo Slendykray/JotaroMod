@@ -13,8 +13,8 @@ using System.Security.Permissions;
 //rename this namespace
 namespace JotaroMod
 {
+    //[BepInDependency("com.rune580.riskofoptions", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("com.weliveinasociety.CustomEmotesAPI", BepInDependency.DependencyFlags.SoftDependency)]
-    [BepInDependency("com.rune580.riskofoptions", BepInDependency.DependencyFlags.SoftDependency)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
     [BepInPlugin(MODUID, MODNAME, MODVERSION)]
     public class JotaroPlugin : BaseUnityPlugin
@@ -24,7 +24,7 @@ namespace JotaroMod
         //   this shouldn't even have to be said
         public const string MODUID = "com.slendykray.JotaroMod";
         public const string MODNAME = "JotaroMod";
-        public const string MODVERSION = "1.0.0";
+        public const string MODVERSION = "1.1.0";
 
         // a prefix for name tokens to prevent conflicts- please capitalize all name tokens for convention
         public const string DEVELOPER_PREFIX = "SLEND";
@@ -39,6 +39,7 @@ namespace JotaroMod
             //easy to use logger
             Log.Init(Logger);
 
+            JotaroConfig.Init();
             // used when you want to properly set up language folders
             Modules.Language.Init();
 
@@ -49,5 +50,6 @@ namespace JotaroMod
             new Modules.ContentPacks().Initialize();
 
         }
+
     }
 }

@@ -14,7 +14,7 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
             hitboxGroupName = "SwordGroup";
 
             damageType = DamageTypeCombo.GenericPrimary;
-            damageCoefficient = JotaroStaticValues.swordDamageCoefficient;
+            damageCoefficient = JotaroConfig.primaryDamageCoefficient.Value;
             procCoefficient = 1f;
             pushForce = 300f;
             bonusForce = Vector3.zero;

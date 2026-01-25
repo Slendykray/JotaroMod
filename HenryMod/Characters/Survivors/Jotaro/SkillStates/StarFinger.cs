@@ -8,7 +8,7 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
 {
     public class StarFinger : BaseSkillState
     {
-        public static float damageCoefficient = JotaroStaticValues.fingerDamageCoefficient;
+        public static float damageCoefficient = JotaroConfig.secondaryAltDamageCoefficient.Value;
         public static float procCoefficient = 1f;
         public static float baseDuration = 0.4f;
         //delay on firing is usually ass-feeling. only set this if you know what you're doing
@@ -32,7 +32,8 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
             //muzzleString = "Muzzle";
 
             //PlayAnimation("LeftArm, Override", "ShootGun", "ShootGun.playbackRate", 1.8f);
-            Util.PlaySound("StarFinger", gameObject); 
+            if (JotaroConfig.voiceLines.Value)
+                Util.PlaySound("StarFinger", gameObject); 
 
             //GetComponent<AimBuffer>().direction = inputBank.aimDirection;
 

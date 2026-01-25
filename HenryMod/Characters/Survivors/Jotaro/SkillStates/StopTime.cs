@@ -24,7 +24,7 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
 
         private static float TIMESTOP_STARTUP_DURATION = 0.2f;
 
-        public static float TIMESTOP_DURATION = 5f;
+        public static float TIMESTOP_DURATION = JotaroConfig.timeStopDuration.Value;
  
         public static bool TIMESTOP_ACTIVE = false;
 
@@ -44,7 +44,8 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
 
             characterBodyUsed = base.characterBody;
 
-            Util.PlaySound("ZaWarudo", gameObject);
+            if (JotaroConfig.voiceLines.Value)
+                Util.PlaySound("ZaWarudo", gameObject);
         }
 
     
