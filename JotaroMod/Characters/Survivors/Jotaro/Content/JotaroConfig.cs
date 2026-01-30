@@ -6,11 +6,6 @@ namespace JotaroMod.Survivors.Jotaro
 {
     public static class JotaroConfig
     {
-        public static ConfigEntry<KeyCode> emoteButton;
-
-        public static ConfigEntry<bool> voiceLines;
-
-
         public static ConfigEntry<float> baseHealth;
         public static ConfigEntry<float> baseRegen;
         public static ConfigEntry<float> baseArmor;
@@ -32,13 +27,17 @@ namespace JotaroMod.Survivors.Jotaro
 
         public static ConfigEntry<float> timeStopDuration;
         public static ConfigEntry<float> specialCD;
+
+
+        public static ConfigEntry<KeyboardShortcut> emoteButton;
+        public static ConfigEntry<float> voiceVolume;
+        public static ConfigEntry<float> secondaryChance;
+        public static ConfigEntry<float> utilityChance;
+        public static ConfigEntry<float> specialChance;
         public static void Init()
         {
 
-            voiceLines = Config.BindAndOptions("00 - Shit", "voiceLines", true, description: "turn off if you are cringe");
 
-            emoteButton = Config.BindAndOptions("01 - Emote", "YareYare", KeyCode.None);
-       
             baseHealth = Config.BindAndOptions("02 - Stats", "baseHealth", 160f);
             baseRegen = Config.BindAndOptions("02 - Stats", "baseRegen", 1.5f);
             baseArmor = Config.BindAndOptions("02 - Stats", "baseArmor", 20f);
@@ -61,9 +60,22 @@ namespace JotaroMod.Survivors.Jotaro
 
             timeStopDuration = Config.BindAndOptions("07 - ZaWarudo", "TimeStopDuration", 5f);
             specialCD = Config.BindAndOptions("07 - ZaWarudo", "Cooldown", 10f);
+
+
+
+
+            voiceVolume = Config.BindAndOptions("Voice Lines", "Volume", 100f, risk: true);
+            secondaryChance = Config.BindAndOptions("Voice Lines", "Secondary Probability", 100f, description: "chance to play voiceline", risk: true);
+            utilityChance = Config.BindAndOptions("Voice Lines", "Utility Probability", 100f, description: "chance to play voiceline", risk: true);
+            specialChance = Config.BindAndOptions("Voice Lines", "Special Probability", 100f, description: "chance to play voiceline", risk: true);
+
+            emoteButton = Config.BindAndOptions("Emote", "YareYare", new KeyboardShortcut(KeyCode.None), risk: true);
         }
 
-
+        public static bool Roll(float chance)
+        {
+            return Random.value < chance / 100;
+        }
 
     }
 }

@@ -32,8 +32,8 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
             //muzzleString = "Muzzle";
 
             //PlayAnimation("LeftArm, Override", "ShootGun", "ShootGun.playbackRate", 1.8f);
-            if (JotaroConfig.voiceLines.Value)
-                Util.PlaySound("StarFinger", gameObject); 
+            if (JotaroConfig.Roll(JotaroConfig.secondaryChance.Value))
+                Util.PlaySound("Play_StarFinger", gameObject);
 
             //GetComponent<AimBuffer>().direction = inputBank.aimDirection;
 

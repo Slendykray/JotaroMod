@@ -45,9 +45,8 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
 
             oraFX = GameObject.Instantiate(JotaroAssets.oraOraEffect, FindModelChild("SwingCenter"));
 
-            if (JotaroConfig.voiceLines.Value)
+            if (JotaroConfig.Roll(JotaroConfig.utilityChance.Value))
                 Util.PlaySound("Play_OraOra", gameObject);
-          
         }
 
         public override void FixedUpdate()

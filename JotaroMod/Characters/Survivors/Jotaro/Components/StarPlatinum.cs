@@ -136,7 +136,7 @@ namespace JotaroMod.Survivors.Jotaro.Components
 
         void Update()
         {
-            if (Input.GetKeyDown(JotaroConfig.emoteButton.Value))
+            if (Input.GetKeyDown(JotaroConfig.emoteButton.Value.MainKey))
             {
                 Animator pAnim = GetParentAnimator();
                 bool emote = pAnim.GetBool("Emote");
@@ -156,8 +156,7 @@ namespace JotaroMod.Survivors.Jotaro.Components
 
         public void PlayMenuSound()
         {
-            if (JotaroConfig.voiceLines.Value)
-                Util.PlaySound("Play_Menu_Random", gameObject);
+            Util.PlaySound("Play_Menu_Random", gameObject);
         }
 
     }

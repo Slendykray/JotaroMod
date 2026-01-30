@@ -61,7 +61,7 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
 
             GetComponent<StarPlatinum>().AddTime(duration);
 
-            if (JotaroConfig.voiceLines.Value)
+            if (JotaroConfig.Roll(JotaroConfig.secondaryChance.Value))
                 Util.PlaySound("OraMega", gameObject);
 
             this.overlapAttack = base.InitMeleeOverlap(JotaroConfig.secondaryDamageCoefficient.Value, JotaroAssets.impactEffect, base.GetModelTransform(), "PunchGroup");

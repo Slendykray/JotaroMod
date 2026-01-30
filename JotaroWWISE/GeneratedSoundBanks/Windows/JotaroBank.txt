@@ -1,27 +1,25 @@
 Event	ID	Name			Wwise Object Path	Notes
 	436002847	Play_Menu_Random			\Default Work Unit\Play_Menu_Random	
-	595159783	Ora			\Default Work Unit\Ora	
-	1650942310	StarFinger			\Default Work Unit\StarFinger	
 	2024159296	Stop_OraOra			\Default Work Unit\Stop_OraOra	
 	2528840910	ZaWarudo			\Default Work Unit\ZaWarudo	
 	2720874374	ZaWarudoStart			\Default Work Unit\ZaWarudoStart	
 	2817193954	Play_OraOra			\Default Work Unit\Play_OraOra	
 	3160086721	OraMega			\Default Work Unit\OraMega	
-	3909803747	YareYareDaze			\Default Work Unit\YareYareDaze	
 	3952163341	ZaWarudoEnd			\Default Work Unit\ZaWarudoEnd	
+	4135255589	Play_StarFinger			\Default Work Unit\Play_StarFinger	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	1640939164	Volume_Jotaro_Voice			\Default Work Unit\Volume_Jotaro_Voice	
 	3673881719	Volume_SFX			\Default Work Unit\Volume_SFX	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	188433313	YareYareDaze	C:\Users\Slend\Documents\WwiseProjects\Jojo\.cache\Windows\SFX\YareYareDaze_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Menu_Random\YareYareDaze		19912
-	190748349	ZaWarudoEnd	C:\Users\Slend\Documents\WwiseProjects\Jojo\.cache\Windows\SFX\zawarudoEnd1_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\ZaWarudoEnd		17114
-	272562748	StarFinga2	C:\Users\Slend\Documents\WwiseProjects\Jojo\.cache\Windows\SFX\StarFinga2_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Voice\StarFinga2		17658
-	418876886	Understan	C:\Users\Slend\Documents\WwiseProjects\Jojo\.cache\Windows\SFX\Understan_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Menu_Random\Understan		37887
-	833606069	YareYare	C:\Users\Slend\Documents\WwiseProjects\Jojo\.cache\Windows\SFX\YareYare_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Menu_Random\YareYare		18329
-	949215421	Ora	C:\Users\Slend\Documents\WwiseProjects\Jojo\.cache\Windows\SFX\Ora_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Ora		12017
-	973912036	ZaWarudoStart	C:\Users\Slend\Documents\WwiseProjects\Jojo\.cache\Windows\SFX\ZaWarudoStart_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\ZaWarudoStart		39242
-	1028100216	ZaWarudo	C:\Users\Slend\Documents\WwiseProjects\Jojo\.cache\Windows\SFX\ZaWarudo69_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Voice\ZaWarudo		9304
-	1034644931	OraOra	C:\Users\Slend\Documents\WwiseProjects\Jojo\.cache\Windows\SFX\OraOraOra_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Voice\OraOra		215453
-	1054144349	OraMega	C:\Users\Slend\Documents\WwiseProjects\Jojo\.cache\Windows\SFX\ORAA_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Voice\OraMega		16058
+	188433313	YareYareDaze	C:\Users\Slend\Documents\GitHub\JotaroMod\JotaroWWISE\.cache\Windows\SFX\YareYareDaze_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Voice\Menu_Random\YareYareDaze		19912
+	190748349	ZaWarudoEnd	C:\Users\Slend\Documents\GitHub\JotaroMod\JotaroWWISE\.cache\Windows\SFX\zawarudoEnd1_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\ZaWarudoEnd		17114
+	272562748	StarFinga2	C:\Users\Slend\Documents\GitHub\JotaroMod\JotaroWWISE\.cache\Windows\SFX\StarFinga2_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Voice\StarFinga2		17658
+	418876886	Understan	C:\Users\Slend\Documents\GitHub\JotaroMod\JotaroWWISE\.cache\Windows\SFX\Understan_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Voice\Menu_Random\Understan		37887
+	833606069	YareYare	C:\Users\Slend\Documents\GitHub\JotaroMod\JotaroWWISE\.cache\Windows\SFX\YareYare_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Voice\Menu_Random\YareYare		18329
+	973912036	ZaWarudoStart	C:\Users\Slend\Documents\GitHub\JotaroMod\JotaroWWISE\.cache\Windows\SFX\ZaWarudoStart_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\ZaWarudoStart		39242
+	1028100216	ZaWarudo	C:\Users\Slend\Documents\GitHub\JotaroMod\JotaroWWISE\.cache\Windows\SFX\ZaWarudo69_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Voice\ZaWarudo		9304
+	1034644931	OraOra	C:\Users\Slend\Documents\GitHub\JotaroMod\JotaroWWISE\.cache\Windows\SFX\OraOraOra_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Voice\OraOra		215453
+	1054144349	OraMega	C:\Users\Slend\Documents\GitHub\JotaroMod\JotaroWWISE\.cache\Windows\SFX\ORAA_EDCD4836.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_Mixer\Voice\OraMega		16058
 

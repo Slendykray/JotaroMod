@@ -8,6 +8,7 @@
 						<Property Name="InitialValue" Type="Real64" Value="100"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="Volume_Jotaro_Voice" ID="{4C0594DB-D0FD-44AD-95CB-8AAEB74AED43}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

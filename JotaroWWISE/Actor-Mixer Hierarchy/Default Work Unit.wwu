@@ -75,98 +75,6 @@
 								<ActiveSource Name="ZaWarudoStart" ID="{C05A8E10-2A40-4AEC-82E0-3C127564D3DD}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<RandomSequenceContainer Name="Menu_Random" ID="{54FE8D38-8A58-4294-B01B-7C66D14FC99A}" ShortID="859732951">
-							<PropertyList>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>5</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D9BEDA18-9D2E-4530-87E1-558582D67D09}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6753BF45-6EFC-419F-A246-C258689BEB14}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="YareYareDaze" ID="{6CD1A2EB-B154-4238-8277-04E253D579E9}" ShortID="153876206">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>4</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D9BEDA18-9D2E-4530-87E1-558582D67D09}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6753BF45-6EFC-419F-A246-C258689BEB14}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="YareYareDaze" ID="{814B2CE6-FFCC-4833-958C-207E1C79EC45}">
-											<Language>SFX</Language>
-											<AudioFile>YareYareDaze.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="188433313"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="YareYareDaze" ID="{814B2CE6-FFCC-4833-958C-207E1C79EC45}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Understan" ID="{0C7CDAE5-E28E-42BD-9FBA-64ED96DA543F}" ShortID="18652707">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D9BEDA18-9D2E-4530-87E1-558582D67D09}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6753BF45-6EFC-419F-A246-C258689BEB14}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Understan" ID="{8F879B4D-57CA-4DD9-A3E7-747623E05263}">
-											<Language>SFX</Language>
-											<AudioFile>Understan.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="418876886"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Understan" ID="{8F879B4D-57CA-4DD9-A3E7-747623E05263}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="YareYare" ID="{55475218-8553-47F5-A327-13C3F9539587}" ShortID="817666098">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D9BEDA18-9D2E-4530-87E1-558582D67D09}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6753BF45-6EFC-419F-A246-C258689BEB14}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="YareYare" ID="{A33569DB-6BC1-4A82-B34C-DA062F03FCD6}">
-											<Language>SFX</Language>
-											<AudioFile>YareYare.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="833606069"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="YareYare" ID="{A33569DB-6BC1-4A82-B34C-DA062F03FCD6}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<Sound Name="Ora" ID="{E3CAFA01-2E57-4AFA-BE45-3540CE060380}" ShortID="930622772">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
@@ -195,36 +103,6 @@
 								<ActiveSource Name="Ora" ID="{7E656A69-E2C1-4846-8190-974E767F2BFD}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Finga" ID="{16121A7A-C4CF-49B1-BAFC-FE9F5C2EAB50}" ShortID="803268394">
-							<PropertyList>
-								<Property Name="OverridePriority" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>4</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D9BEDA18-9D2E-4530-87E1-558582D67D09}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6753BF45-6EFC-419F-A246-C258689BEB14}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Finga" ID="{7666E7A0-4E4D-46E3-B56D-10F60F81CBD0}">
-									<Language>SFX</Language>
-									<AudioFile>Finga.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="325629306"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Finga" ID="{7666E7A0-4E4D-46E3-B56D-10F60F81CBD0}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<ActorMixer Name="Voice" ID="{DD61ABC6-4BB6-4D89-8BFD-031723A8AE8E}" ShortID="337454811">
 							<PropertyList>
 								<Property Name="BelowThresholdBehavior" Type="int16" Value="2"/>
@@ -233,7 +111,6 @@
 										<Value>1</Value>
 									</ValueList>
 								</Property>
-								<Property Name="OverrideVirtualVoice" Type="bool" Value="True"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
@@ -286,7 +163,6 @@
 								<Sound Name="OraOra" ID="{A58AC791-A023-4D33-8382-93D1644BD416}" ShortID="717765853">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
-										<Property Name="OverridePriority" Type="bool" Value="True"/>
 										<Property Name="Priority" Type="int16">
 											<ValueList>
 												<Value>60</Value>
@@ -368,7 +244,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-16</Value>
+												<Value>-14</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -396,7 +272,148 @@
 										<ActiveSource Name="StarFinga2" ID="{C174FCAF-7553-41EF-BBE3-A83948140556}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<RandomSequenceContainer Name="Menu_Random" ID="{54FE8D38-8A58-4294-B01B-7C66D14FC99A}" ShortID="859732951">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="OverridePriority" Type="bool" Value="True"/>
+										<Property Name="Priority" Type="int16">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="OraXd" ID="{52BA921A-9308-47F3-869E-1143A34B2836}" WorkUnitID="{06A01F41-8B90-446E-9E48-6120D63149B5}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D9BEDA18-9D2E-4530-87E1-558582D67D09}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6753BF45-6EFC-419F-A246-C258689BEB14}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="YareYareDaze" ID="{6CD1A2EB-B154-4238-8277-04E253D579E9}" ShortID="153876206">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D9BEDA18-9D2E-4530-87E1-558582D67D09}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6753BF45-6EFC-419F-A246-C258689BEB14}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="YareYareDaze" ID="{814B2CE6-FFCC-4833-958C-207E1C79EC45}">
+													<Language>SFX</Language>
+													<AudioFile>YareYareDaze.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="188433313"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="YareYareDaze" ID="{814B2CE6-FFCC-4833-958C-207E1C79EC45}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Understan" ID="{0C7CDAE5-E28E-42BD-9FBA-64ED96DA543F}" ShortID="18652707">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D9BEDA18-9D2E-4530-87E1-558582D67D09}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6753BF45-6EFC-419F-A246-C258689BEB14}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Understan" ID="{8F879B4D-57CA-4DD9-A3E7-747623E05263}">
+													<Language>SFX</Language>
+													<AudioFile>Understan.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="418876886"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Understan" ID="{8F879B4D-57CA-4DD9-A3E7-747623E05263}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="YareYare" ID="{55475218-8553-47F5-A327-13C3F9539587}" ShortID="817666098">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{D9BEDA18-9D2E-4530-87E1-558582D67D09}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{6753BF45-6EFC-419F-A246-C258689BEB14}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="YareYare" ID="{A33569DB-6BC1-4A82-B34C-DA062F03FCD6}">
+													<Language>SFX</Language>
+													<AudioFile>YareYare.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="833606069"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="YareYare" ID="{A33569DB-6BC1-4A82-B34C-DA062F03FCD6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{B20CF594-6030-4F2B-9CCA-1EF7D326B41E}" ShortID="260939258">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Volume_Jotaro_Voice" ID="{4C0594DB-D0FD-44AD-95CB-8AAEB74AED43}" WorkUnitID="{BF575291-EEE8-4DDE-A92F-EAFAA02B1148}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{13DE57D5-FA02-47A3-9073-792038395415}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</ActorMixer>
 						<Sound Name="StarFinger" ID="{585448C4-05B2-4C1F-926A-66138A62D3A8}" ShortID="622954379">
 							<PropertyList>

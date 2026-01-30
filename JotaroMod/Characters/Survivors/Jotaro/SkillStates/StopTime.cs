@@ -44,7 +44,7 @@ namespace JotaroMod.Survivors.Jotaro.SkillStates
 
             characterBodyUsed = base.characterBody;
 
-            if (JotaroConfig.voiceLines.Value)
+            if (JotaroConfig.Roll(JotaroConfig.specialChance.Value))
                 Util.PlaySound("ZaWarudo", gameObject);
         }
 

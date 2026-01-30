@@ -40,8 +40,12 @@ namespace JotaroMod.Survivors.Jotaro
              
             _assetBundle = assetBundle;
 
-            //icon = _assetBundle.LoadAsset<Sprite>("texJotaroIcon");
-            //RiskOfOptions.ModSettingsManager.SetModIcon(JotaroAssets._assetBundle.LoadAsset<Sprite>("texJotaroIcon"));
+            if (BepInEx.Bootstrap.Chainloader.PluginInfos.ContainsKey("com.rune580.riskofoptions"))
+            {
+                Sprite icon = _assetBundle.LoadAsset<Sprite>("texJotaroIcon");
+                RiskOfOptions.ModSettingsManager.SetModIcon(icon);
+            }
+           
             //swordHitSoundEvent = Content.CreateAndAddNetworkSoundEventDef("HenrySwordHit");
 
             CreateEffects();

@@ -1,8 +1,10 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
 using JotaroMod.Survivors.Jotaro;
+using MonoMod.RuntimeDetour;
 using R2API.Utils;
 using RoR2;
+using System;
 using System.Collections.Generic;
 using System.Security;
 using System.Security.Permissions;
@@ -13,7 +15,7 @@ using System.Security.Permissions;
 //rename this namespace
 namespace JotaroMod
 {
-    //[BepInDependency("com.rune580.riskofoptions", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("com.rune580.riskofoptions", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("com.weliveinasociety.CustomEmotesAPI", BepInDependency.DependencyFlags.SoftDependency)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
     [BepInPlugin(MODUID, MODNAME, MODVERSION)]
@@ -24,7 +26,7 @@ namespace JotaroMod
         //   this shouldn't even have to be said
         public const string MODUID = "com.slendykray.JotaroMod";
         public const string MODNAME = "JotaroMod";
-        public const string MODVERSION = "1.1.1";
+        public const string MODVERSION = "1.2.0";
 
         // a prefix for name tokens to prevent conflicts- please capitalize all name tokens for convention
         public const string DEVELOPER_PREFIX = "SLEND";
@@ -49,6 +51,36 @@ namespace JotaroMod
             // make a content pack and add it. this has to be last
             new Modules.ContentPacks().Initialize();
 
+        }
+
+        
+        private static Hook AddBankAfterAKSoundEngineInit;
+
+        private void Start()
+        {
+            AddBankAfterAKSoundEngineInit = new Hook(
+                typeof(AkSoundEngineInitialization).GetMethodCached(nameof(AkSoundEngineInitialization.InitializeSoundEngine)),
+                typeof(JotaroPlugin).GetMethodCached(nameof(AddBank)));
+
+        }
+
+        //Stolen from https://github.com/Popcorn-Factory/lee-hyperreal-ror2/blob/master/LeeHyperrealMod/LeeHyperrealPlugin.cs#L134 xd
+        private static bool AddBank(Func<AkSoundEngineInitialization, bool> orig, AkSoundEngineInitialization self)
+        {
+            var res = orig(self);
+
+            if (AkSoundEngine.IsInitialized())
+            {
+                SetVolume();
+                JotaroConfig.voiceVolume.SettingChanged += (obj, args) => SetVolume();
+            }
+
+            return res;
+        }
+
+        public static void SetVolume()
+        {
+            AkSoundEngine.SetRTPCValue("Volume_Jotaro_Voice", JotaroConfig.voiceVolume.Value);
         }
 
     }

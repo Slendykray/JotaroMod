@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{22BAA557-AED2-D9CA-DA3B-A62B9A064148}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{38767BF3-9ADF-6076-3350-E76E7F2315E8}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -25,6 +25,7 @@
 				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
 				<GameParameter Id="1029930033" Name="SS_Air_Fury"/>
 				<GameParameter Id="1351367891" Name="SS_Air_Fear"/>
+				<GameParameter Id="1640939164" Name="Volume_Jotaro_Voice"/>
 				<GameParameter Id="2648548617" Name="SS_Air_Month"/>
 				<GameParameter Id="3002758120" Name="SS_Air_Freefall"/>
 				<GameParameter Id="3074696722" Name="SS_Air_Size"/>
@@ -163,7 +164,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="2088961402" Type="User" Language="SFX" Hash="{022C3316-C537-A7D1-E477-E4006C5EA929}">
+		<SoundBank Id="2088961402" Type="User" Language="SFX" Hash="{7DB7DABB-C997-7D0E-A018-63D9A7F567EA}">
 			<ShortName>JotaroBank</ShortName>
 			<Path>JotaroBank.bnk</Path>
 			<Media>
@@ -187,10 +188,6 @@
 					<ShortName>YareYare.wav</ShortName>
 					<CachePath>SFX/YareYare_EDCD4836.wem</CachePath>
 				</File>
-				<File Id="949215421" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Ora.wav</ShortName>
-					<CachePath>SFX/Ora_EDCD4836.wem</CachePath>
-				</File>
 				<File Id="973912036" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ZaWarudoStart.wav</ShortName>
 					<CachePath>SFX/ZaWarudoStart_EDCD4836.wem</CachePath>
@@ -209,11 +206,6 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="595159783" Name="Ora">
-					<MediaRefs>
-						<MediaRef Id="949215421"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3160086721" Name="OraMega">
 					<MediaRefs>
 						<MediaRef Id="1054144349"/>
@@ -231,17 +223,12 @@
 						<MediaRef Id="1034644931"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1650942310" Name="StarFinger">
+				<Event Id="4135255589" Name="Play_StarFinger">
 					<MediaRefs>
 						<MediaRef Id="272562748"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2024159296" Name="Stop_OraOra"/>
-				<Event Id="3909803747" Name="YareYareDaze">
-					<MediaRefs>
-						<MediaRef Id="188433313"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="2528840910" Name="ZaWarudo">
 					<MediaRefs>
 						<MediaRef Id="1028100216"/>
@@ -259,9 +246,10 @@
 				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="1640939164" Name="Volume_Jotaro_Voice"/>
 				<GameParameter Id="3673881719" Name="Volume_SFX"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E5F97CA0-283C-B737-CB3E-6B82AE4BC087}</FileHash>
+	<FileHash>{B72F3E10-E530-D457-B999-C2B8C3BEBCB3}</FileHash>
 </SoundBanksInfo>

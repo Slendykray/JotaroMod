@@ -1,3 +1,10 @@
+## 1.2.0
+
+- Added voice lines config.
+- Voice lines fade in and out.
+- Made primary faster and gave bigger hitbox.
+- Added risk of options.
+
 ## 1.1.1
 
 - Added git repo.
