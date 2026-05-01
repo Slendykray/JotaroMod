@@ -13,13 +13,13 @@ using System.Security.Permissions;
 [assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
 
 //rename this namespace
-namespace JotaroMod
+namespace JotaroMod 
 {
     [BepInDependency("com.rune580.riskofoptions", BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency("com.weliveinasociety.CustomEmotesAPI", BepInDependency.DependencyFlags.SoftDependency)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
     [BepInPlugin(MODUID, MODNAME, MODVERSION)]
-    public class JotaroPlugin : BaseUnityPlugin
+    public class JotaroPlugin : BaseUnityPlugin 
     {
         // if you do not change this, you are giving permission to deprecate the mod-
         //  please change the names to your own stuff, thanks
